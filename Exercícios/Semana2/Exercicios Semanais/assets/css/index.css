@@ -1,0 +1,36 @@
+.navbar{
+    background-image: url('https://www.callasrevestimentos.com.br/public/img/produtos/CLPV2573/alta/6.jpg');
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#logo{
+    width: 155px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.navbar h1{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.navbar h3{
+    font-size: 20px;
+    text-align: center;
+    margin-right: 0;
+}
+
+.navbar h3 a{
+    color: white;
+    text-decoration: none;
+}
+.navbar h3 a:hover{
+    color: #C2AE58;
+    text-decoration: underline;
+}
