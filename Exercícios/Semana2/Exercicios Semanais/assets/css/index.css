@@ -15,6 +15,10 @@
     margin-bottom: 0;
 }
 
+.img{
+    width: 90px;
+}
+
 .navbar div{
     text-align: center;
 }
@@ -48,7 +52,7 @@
 .casamento{
     background-color: #C2AE58;
     color: black;
-    margin-top: 218px;
+    margin-top: 198px;
     padding-top: 10px;
     text-align: center;
     font-size: 32px;
@@ -108,27 +112,20 @@ article div{
 
 /* Formulário contato */
 
-#info{
-    width: 26em;
-}
-
 #titulo{
     font-family: sans-serif;
-    color: #380B61;
-    margin-left: 7%;
+    color: black;
 }
 
 #subtitulo{
     font-family: sans-serif;
-    color: #380B61;
-    margin-left: 10%;
+    color: #370617;
 }
 
 .formulario{
     font-family: sans-serif;
     font-size: 1em;
     color: #59429d;
-    margin-left: 36%;
     margin-top: 2%;
     justify-content: center;
 }
@@ -143,18 +140,13 @@ input, select, textarea, button{
 
 .campo label{
     margin-bottom: 0.2em;
-    color: #59429d;
+    color: #6A040F;
     display: block;
-}
-
-.grupo .campo{
-    float: left;
-    margin-right: 1em;
 }
 
 .campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea{
     padding: 0.2em;
-    border: 1px solid #59429d;
+    border: 1px solid #370617;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -168,21 +160,18 @@ input, select, textarea, button{
 
 .botao{
     font-size: 1.2em;
-    background: #59429d;
+    background: #E85D04;
     border: 0;
     margin-bottom: 1em;
     color:white;
     padding: 0.2em 0.6em;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
 }
 
 .botao:hover{
-    background: #ccbbff;
+    background: #D00000;
     box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
     text-shadow: none;
 }
