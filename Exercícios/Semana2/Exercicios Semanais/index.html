@@ -12,18 +12,24 @@
 
     <body>
         
-        <nav style="text-align: center;" class="navbar">
-            
-            <h1 class="titulo">Eventual</h1>
+        <header>
+            <nav class="navbar">
+                <h1 class="titulo">Eventual</h1>
 
-            <img id="logo" src="assets/imgs/Logo - Eventual.png" alt="Logo - Eventual">
+                <div>
+                    <div>
+                        <img id="logo" src="assets/imgs/Logo - Eventual.png" alt="Logo - Eventual">
+                    </div>
 
-            <div class="vp">
-            <a href="">Contato</a>
-            <a href="">Sobre</a>
-            <a href="">Eventos</a>
-            </div>
-        </nav>
+                    <div class="vp">
+                        <a href="">Contato</a>
+                        <a href="">Sobre</a>
+                        <a href="">Eventos</a>
+                    </div>
+                </div>
+    
+            </nav>
+        </header>
 
         <main>
             <section class="evento">
@@ -40,7 +46,7 @@
                 </div>
             </section>
 
-            <section>
+            <article>
                 <div class="divEventos">
                     <div>
                         <img id="fotoCasamento1" src="assets/imgs/Casamento1.jpg" alt="Casamento1">
@@ -71,6 +77,62 @@
                     </div>
 
                 </div>
+            </article>
+
+            <section class="formulario">
+
+                <div>
+                    <h2 id="titulo">Entre em contato conosco e faça o seu orçamento!</h2>
+                    <p id="subtitulo">Complete as informações</p>
+                    <br>
+                </div>
+
+                <form>
+
+                    <div class="campo">
+                        <label for="nome"><strong>Nome</strong></label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email"><strong>Email</strong></labelf>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label><strong>Qual o tipo de evento?</strong></label>
+                        <label>
+                            <input type="radio" name="devweb" id="casamento">Casamento
+                        </label>
+                        <label>
+                            <input type="radio" name="devweb" id="festa-15-anos">Festa de 15 anos
+                        </label>
+                        <label>
+                            <input type="radio" name="devweb" id="barmitzva">Bar Mitzvá
+                        </label>
+                    </div>
+
+                    <div class="campo">
+                        <label for="n_pessoas"><strong>Quantas pessoas no evento?</strong></label>
+                        <select id="n_pessoas">
+                            <option selected disabled value="">Selecione</option>
+                            <option>0-100 pessoas</option>
+                            <option>100-500 pessoas</option>
+                            <option>500-1000 pessoas</option>
+                            <option>mais de 1000 pessoas</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label><strong>Informações adicionais</strong></label>
+                        <textarea rows="10" id="info" name="info"></textarea>
+                    </div>
+
+                    <button type="submit" class="botao">Enviar</button>
+
+                </form>
+
             </section>
         </main>
         
