@@ -51,6 +51,42 @@
     font-size: 20px;
 }
 
+.evento div p a{
+    color: black;
+}
+
 #data{
     padding-bottom: 18px;
+}
+
+.divEventos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section div{
+    text-align: center;
+}
+
+#fotoCasamento1{
+    width: 380px;
+}
+#pLista1{
+    color: black;
+}
+
+#fotoCasamento2{
+    width: 380px;
+}
+#pLista2{
+    color: black;
+}
+
+#fotoCasamento3{
+    width: 380px;
+}
+#pLista3{
+    color: black;
 }
