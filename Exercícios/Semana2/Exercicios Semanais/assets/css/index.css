@@ -160,9 +160,10 @@ input, select, textarea, button{
 
 .botao{
     font-size: 1.2em;
-    background: #E85D04;
+    background: #370617;
     border: 0;
     margin-bottom: 1em;
+    margin-left: 38px;
     color:white;
     padding: 0.2em 0.6em;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
