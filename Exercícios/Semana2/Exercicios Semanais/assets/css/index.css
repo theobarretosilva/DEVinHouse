@@ -1,61 +1,100 @@
 /* Barra de navegação e Cabeçalho */
 
-.navbar{
-    background-color: #03071E;
-    position: fixed;
-    top: 0;
+.container{
     width: 100%;
 }
 
-.titulo{
-    text-align: center;
+header{
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+}
+
+.navbar h1{
     color: white;
-    font-size: 40px;
-    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5px;
     margin-bottom: 0;
 }
-
-.img{
-    width: 90px;
+.navbar p{
+    color: white;
+    text-align: center;
+    margin-top: 2px;
 }
 
-.navbar div{
-    text-align: center;
+nav:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.van-container{
+    max-width: 1200px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #logo{
-    width: 100px;
-    margin-top: 8px;
-    margin-left: 8px;
-    margin-bottom: 6px;
-}
-
-.vp{
-    text-align: center;
-}
-
-.navbar a{
+    width: 65px;
+    font-size: larger;
     margin-left: 15px;
-    margin-right: 15px;
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
 }
-.navbar a:hover{
+
+.nav-container ul{
+    float: right;
+    line-height: 75px;
+    margin: 0;
+    margin-right: 15px;
+}
+
+.nav-container li{
+    list-style: none;
+    float: left;
+    margin: 0 15px;
+}
+
+.nav-container li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.nav-container li a:hover{
     color: #D00000;
     text-decoration: underline;
 }
 
 /* Evento destacado */
 
-.casamento{
-    background-color: #C2AE58;
+.destaq{
     color: black;
-    margin-top: 198px;
+    margin-top: 170px;
+    margin-bottom: 0;
+    margin-left: 55px;
+    font-size: 20px;
+}
+
+.casamento{
+    background-image: linear-gradient(180deg, #FFBA08, #F48C06, #DC2F02);
+    color: black;
+    margin-top: 10px;
+    margin-left: 55px;
+    margin-right: 55px;
     padding-top: 10px;
     text-align: center;
     font-size: 32px;
+    border-radius: 25px;
+    border: 2px solid black;
 }
 
 #fotoCasamento{
