@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+        <script type="text/javascript" src="assets/js/index.js"></script>
         <link rel="shortcut icon" href="assets/imgs/Logo - Eventual.png">
         <title>Eventual</title>
     </head>
@@ -101,7 +102,7 @@
                     <br>
                 </div>
 
-                <form id="formulario">
+                <form id="formulario" action="javascript:mostrar()">
 
                     <div class="campo">
                         <label for="nome"><strong>Nome*</strong></label>
@@ -139,11 +140,11 @@
 
                     <div class="campo">
                         <br>
-                        <label><strong>Informações adicionais</strong></label>
-                        <textarea rows="10" id="info" name="info"></textarea>
+                        <label><strong>Descrição</strong></label>
+                        <textarea rows="10" id="descricao" name="info"></textarea>
                     </div>
 
-                    <button type="submit" class="botao">Enviar</button>
+                    <button type="submit" id="send" class="botao">Enviar</button>
 
                 </form>
 
