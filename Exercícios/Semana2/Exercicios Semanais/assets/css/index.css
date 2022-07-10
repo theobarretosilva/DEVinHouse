@@ -215,3 +215,68 @@ input, select, textarea, button{
     box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
     text-shadow: none;
 }
+
+/* FOOTER */
+
+footer{
+    background-color: black;
+    margin-bottom: 0;
+}
+
+footer h2{
+    color: white;
+    text-align: center;
+}
+.div_geral{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+
+#tip_eve{
+    margin-left: 35px;
+}
+
+.box li{
+    list-style-type: none;
+    text-align: center;
+}
+.box li a{
+    color: white;
+}
+
+.box2{
+    margin-right: 80px;
+}
+.box2 li{
+    list-style-type: none;
+    text-align: center;
+}
+.box2 li a{
+    color: white;
+}
+
+.footer-left{
+    margin-left: 20px;
+    text-align: center;
+}
+
+.footer-left p{
+    color: white;
+    font-size: 20px;
+}
+
+.socials a img{
+    width: 40px;
+    padding-left: 15px;
+}
+
+.footer-bottom{
+    padding-left: 20px;
+    padding-bottom: 1px;
+    color: white;
+}
+
+#h22{
+    margin-right: 50px;
+}
