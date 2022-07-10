@@ -7,7 +7,9 @@ function mostrar(){
 
     var Descricao = document.querySelector("#descricao");
     var descricao = Descricao.value;
-    
+
     console.log(
     "Formulário de contato => Nome: " + nome + " - E-mail: " + email + " - Descrição: " + descricao);
+
+    alert("Formulário enviado com sucesso");
 }
