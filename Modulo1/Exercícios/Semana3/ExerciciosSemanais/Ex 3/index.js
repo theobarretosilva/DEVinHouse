@@ -1,10 +1,19 @@
-var pNum1 = prompt("Digite o primeiro número:");
-var pNum2 = prompt("Digite o segundo número:");
-var operacao = prompt("Qual operação você deseja fazer? ('+' soma, '-' subtração, '*' multiplicação, '/' divisão");
-
-function soma(){
-    if(operacao == '+'){
-        var soma = pNum1 + pNum2;
-        console.log(pNum1);
-    }
+const operacao = prompt("Qual operação você deseja fazer? ('+' soma, '-' subtração, '*' multiplicação, '/' divisão");
+    
+if(operacao === "+"){
+    const aNum1 = parseInt(prompt("Digite o primeiro número:"));
+    const aNum2 = parseInt(prompt("Digite o segundo número:"));
+    console.log(aNum1+aNum2);
+}else if(operacao === "-"){
+    const bNum1 = parseInt(prompt("Digite o primeiro número:"));
+    const bNum2 = parseInt(prompt("Digite o segundo número:"));
+    console.log(bNum1-bNum2);
+}else if(operacao === "*"){
+    const cNum1 = parseInt(prompt("Digite o primeiro número:"));
+    const cNum2 = parseInt(prompt("Digite o segundo número:"));
+    console.log(cNum1*cNum2);
+}else if(operacao === "/"){
+    const dNum1 = parseInt(prompt("Digite o primeiro número:"));
+    const dNum2 = parseInt(prompt("Digite o segundo número:"));
+    console.log(dNum1/dNum2);
 }

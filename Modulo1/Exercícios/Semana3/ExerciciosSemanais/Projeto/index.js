@@ -21,6 +21,13 @@ console.log(listaDeConvidados);
 
 function liberarBebidas(listaDeConvidados){
     var listaDeConvidadosFinal = [];
+    const idadeObj = listaDeConvidados[idade];
     
-    if(listaDeConvidados.idade)
+    if(idadeObj > 17){
+        listaDeConvidados.openBar = true;
+    }else{
+        listaDeConvidados.openBar = false;
+    }
+
+    console.log(listaDeConvidados);
 }
