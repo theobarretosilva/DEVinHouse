@@ -14,12 +14,66 @@ function liberarBebidas(lista){
     var resultado = lista.map((convidado) => {
         convidado.openBar = false;
         
-        if(listaDeConvidados.idade = 18){
-            convidado.openBar = false;
+        if(convidado.idade >= 18){
+            convidado.openBar = true;
         }
         return convidado;
     });
     return resultado;
 }
 var listaDeConvidadosFinal = liberarBebidas(listaDeConvidados);
-console.log(listaDeConvidadosFinal);
+
+var separarCamarote = (lista) => {
+    var listaCamarote = lista.filter((convidado) => {
+        if(convidado.setor == "camarote"){
+            return true;
+        } else {
+            return false;
+        }
+    });
+    return listaCamarote;
+};
+
+var separarPista = (lista) => {
+    return lista.filter((convidado) => {
+        return convidado.setor == "pista" ? true : false;
+    });
+};
+
+var separarArquibancada = (lista) => {
+    return lista.filter((convidado) => convidado.setor == "arquibancada");
+};
+
+var filtrarPorSetor = (lista, setor) => {
+    return lista.filter((conv) => conv.setor === setor);
+};
+
+const convidadosComBebidasProcessada = liberarBebidas(listaDeConvidados);
+
+const listaArquibancada = separarArquibancada(convidadosComBebidasProcessada);
+const listaCamarote = separarCamarote(convidadosComBebidasProcessada);
+const listaPista = separarPista(convidadosComBebidasProcessada);
+
+const ulArquibancadaEl = document.getElementById("listaArquibancada");
+const ulPistaEl = document.getElementById("listaPista");
+const ulCamaroteEl = document.getElementById("listaCamarote");
+
+const montaNome = (objPessoa) => {
+    return `${objPessoa.nome} ${objPessoa.sobrenome}`;
+};
+
+listaArquibancada.forEach((convidado) => {
+    ulArquibancadaEl.innerHTML += `<li>${montaNome(convidado)}</li>`;
+});
+
+listaCamarote.forEach((convidado) => {
+    ulCamaroteEl.innerHTML += `<li>${montaNome(convidado)}</li>`;
+});
+
+listaPista.forEach((convidado) => {
+    ulPistaEl.innerHTML += `<li>${montaNome(convidado)}</li>`;
+});
+
+const marcarOpenBar = (convidado) => {
+    return convidado.openBar ? "🍹" : "";
+  };
