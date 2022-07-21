@@ -28,21 +28,29 @@ var colocarNoSelect = (list) => {
 };
 
 function saque(valor, idConta){
+    var valor = document.querySelector('#valor').value;
+
     var selectSaque = document.getElementById("saqueDeposito");
     var opcaoSaque = selectSaque.options[selectSaque.selectedIndex].value;
-    /*if(/*Select 'Sacar' for selecionado === "Sacar"){
 
-    }
-    if(valor <= 0 ){
-        alert("O valor digitado para saque é inválido");
-    }else if(valor > saldoConta){
-        alert("Saldo insuficiente! " + "Seu saldo atual é: R$ " + saldoConta)
-    }else if(valor > 0 || valor < saldoConta){
-        alert("O saque foi feito com sucesso! Seu saldo atual é: R$ " + saldoConta);
-        //atualizar array com o saldo atual da conta//
+    var contaSelecionada = document.querySelector('#saqueDeposito');
+    var idSelecionado = contaSelecionada.options[contaSelecionada.selectedIndex].value;
+
+    var saldoContaDeAcordoId = contasClientes.[idSelecionado, nom]
+    //EU ESTAVA PEGANDO O SALDO DO CLIENTE DE ACORDO COM O ID SELECIONADO NO SELECT//
+    
+    /*if(opcaoSaque === "Sacar"){
+        if(valor <= 0 ){
+            alert("O valor digitado para saque é inválido");
+        }else if(valor > saldoConta){
+            alert("Saldo insuficiente! " + "Seu saldo atual é: R$ " + saldoConta)
+        }else if(valor > 0 || valor < saldoConta){
+            alert("O saque foi feito com sucesso! Seu saldo atual é: R$ " + saldoConta);
+            //atualizar array com o saldo atual da conta//
+        }
     }*/
-}
+};
 
-var selectSaque = document.querySelector("#saqueDeposito");
-var opcaoSaque = selectSaque.options[select.selectedIndex].text;
-console.log(opcaoSaque);
+/*var selectSaque = document.getElementById('saqueDeposito');
+var opcaoSaque = selectSaque.options[selectSaque.selectedIndex].text;
+console.log(opcaoSaque);*/
