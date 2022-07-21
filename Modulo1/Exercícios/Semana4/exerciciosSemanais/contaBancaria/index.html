@@ -6,16 +6,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="assets/js/index.js"></script>
         <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
-        <title>Perfil do usuário</title>
+        <link rel="shortcut icon" href="assets/imgs/logo.png">
+        <title>urBank</title>
     </head>
-    <body onload="colocarNoSelect(contasClientes)">
-        <select id="contasClientes"></select>
-        <input type="text" placeholder="Valor">
-        <select id="saqueDeposito">
-            <option value="" selected disabled>Selecione</option>
-            <option value="Sacar">Sacar</option>
-            <option value="Depositar">Depositar</option>
-        </select>
-        <button onclick="adicionarContas()">Confirmar</button>
+    <body>
+        <header>
+
+            <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                <div class="logo">
+                    <img src="assets/imgs/logo.png" alt="Logo - urBank">
+                    <h1>urBank</h1>
+                </div>
+    
+                    <div id="div_links">
+                        <nav class="nav_links">
+                            <li><a class="link" href="#">Produtos</a></li>
+                            <li><a class="link" href="#">Recursos</a></li>
+                            <li><a class="link" href="#">Integrações</a></li>
+                        </nav>  
+                    </div>
+                    
+                    <div class="entrada">
+                        <ul>
+                            <li><a href="perfil.html">Ir para o meu perfil</a></li>
+                        </ul>
+                    </div>
+            </div>
+
+        </header>
+
+        <main>
+            <section>
+                <div class="cartoes">
+                    <h1>Uma conta bancária com <br> o seu estilo!</h1>
+                    <h2>Estilize seu aplicativo do jeito que <br> achar melhor e com sua cor favorita!</h2>
+                </div>
+                <div class="checks">
+                    <div id="check1">
+                        <img class="checks_inline" src="assets/imgs/check.png" alt="Checked">
+                        <p class="checks_inline">Cartão com tecnologia NFC! <br> Aproxime e pague!</p>
+                    </div>
+                    <div id="check2">
+                        <img class="checks_inline" src="assets/imgs/check.png" alt="Checked">
+                        <p class="checks_inline">Conecte com os seus aplicativos favoritos!</p>
+                    </div>
+                    <div id="check3">
+                        <img class="checks_inline" src="assets/imgs/check.png" alt="Checked">
+                        <p class="checks_inline">Ganhe cashback em diversos <br> estabelecimentos!</p>
+                    </div>
+                    <div id="check4">
+                        <img class="checks_inline" src="assets/imgs/check.png" alt="Checked">
+                        <p class="checks_inline">Controle os seus gastos na palma <br> da sua mão com o nosso aplicativo!</p>
+                    </div>
+                </div>
+            </section>
+            <img id="foto_cartoes" src="assets/imgs/cartoes.png" alt="Cartoes personalizados">
+        </main>
     </body>
 </html>
