@@ -1,5 +1,10 @@
 
 function parOuImpar(){
     const valor = document.getElementById('valor').value;
-    console.log(valor);
+    const total = valor/2;
+    if(valor%2 == 0){
+        alert("Par")
+    }else{
+        alert("Ímpar")
+    }
 }
