@@ -1,9 +1,9 @@
 //-------------------------------------------EXERCICIO 3-----------------------------------------------------//
 let contasClientes = [
-    {id: 1, nome: 'Raquel Barreto', saldo: 900000},
-    {id: 2, nome: 'Iran Silva', saldo: 10000},
-    {id: 3, nome: 'Guilherme Barreto Silva', saldo: 3000},
-    {id: 4, nome: 'Théo Barreto Silva', saldo: 500000}
+    {id: 1, nome: 'Raquel Barreto', saldo: 900000, senha: 1234},
+    {id: 2, nome: 'Iran Silva', saldo: 10000, senha: 12345},
+    {id: 3, nome: 'Guilherme Barreto Silva', saldo: 3000, senha: 123456},
+    {id: 4, nome: 'Théo Barreto Silva', saldo: 500000, senha: 1234567}
 ];
 
 function pegarNome(clientes) {
@@ -12,7 +12,6 @@ function pegarNome(clientes) {
 
 let nomeClientes = contasClientes.map(pegarNome);
 let selectContas = document.getElementById('contas_clientes');
-const strongMensagem = document.getElementById('mensagem');
 
 let criarOption = (valor, texto) => {
     let option = document.createElement('option');
@@ -29,39 +28,64 @@ let colocarNoSelect = (list) => {
     });
 };
 
-//-------------------------------------------EXERCICIO 4-----------------------------------------------------//
+window.onload = colocarNoSelect;
+
 function iniciarVariaveis1(){
     const saqueOuDeposito = document.getElementById('saqueDeposito').value;
     const idContaSelect = document.getElementById('contasClientes').value;
-    let saldoDeAcordoId = contasClientes.forEach((id) => {
+    const valor = document.getElementById('valor').value;
+    /*let saldoDeAcordoId = contasClientes.forEach((id) => {
         idContaSelect.saldo;
-    });
-    console.log(saldoDeAcordoId);
+    });*/
 
 }
+    
+//-------------------------------------------EXERCICIO 4-----------------------------------------------------//
+function verificaValorSaque(){
 
-function verificaValor(){
-    iniciarVariaveis1();
+    const valor = document.getElementById('valor').value;
 
     if(valor <= 0){
         alert("O valor digitado para saque é inválido");
-    }else if(valor > saldoContaDeAcordoId){
+    }/*else if(valor > saldoContaDeAcordoId){
         alert("Saldo insuficiente! " + "Seu saldo atual é: R$ " + saldoContaDeAcordoId);
     }else if(valor > 0 || valor < saldoContaDeAcordoId){
         //atualizar array com o saldo atual da conta após saque//
         alert("O saque foi feito com sucesso! Seu saldo atual é: R$ " + saldoContaDeAcordoId);
+    }*/
+}
+
+//-------------------------------------------EXERCICIO 5-----------------------------------------------------//
+function verificaValorDeposito(){
+    const valor = document.getElementById('valor').value;
+
+    if(valor <= 0){
+        alert("O valor digitado para depósito é inválido");
+    }else if(valor > 0){
+        //atualizar array com o saldo atual da conta após depósito//
+        alert("O depósito foi realizado com sucesso! Seu saldo atual é: R$ " + saldoContaDeAcordoId)
     }
 }
 
-function sacar(){
+//-------------------------------------------EXERCICIO 6-----------------------------------------------------//
+function sacarOuDepositar(){
+    const saqueOuDeposito = document.getElementById('saqueDeposito');
+
     iniciarVariaveis1();
-        
+
     if(saqueOuDeposito === "Sacar"){
-        verificaValor();
+        verificaValorSaque();
+    }else if(saqueOuDeposito === "Depositar"){
+        verificaValorDeposito();
     }
 };
 
-//-------------------------------------------EXERCICIO 5-----------------------------------------------------//
+function preenchimentoDeDados(){
+    
+}
+
+const botao = document.getElementById('fazerOperacao');
+
 
 /*const validaValor = (valor)=> {
     if(isNaN(valor) || valor <= 0){

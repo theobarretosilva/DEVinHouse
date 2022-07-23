@@ -9,7 +9,7 @@
         <link rel="shortcut icon" href="assets/imgs/logo.png">
         <title>Perfil do usuário</title>
     </head>
-    <body onload="colocarNoSelect()">
+    <body>
         <div class="inicial">
             <img src="assets/imgs/fotoPerfil.png" alt="fotoPerfil">
             <div>
@@ -19,7 +19,7 @@
         </div>
 
         <main>
-            <form action="">
+            <form id="form">
                 <div id="box_fundo">
                     <div id="escolhaConta">
                         <label class="label" for="contasCliente">Você deseja fazer um depósito ou <br> saque de qual conta?</label>
@@ -42,10 +42,14 @@
                             <option value="Depositar">Depositar</option>
                         </select>
                     </div>
+                    <div class="senha">
+                        <label class="label" for="valor">Digite sua senha</label>
+                        <br>
+                        <input id="senha" type="password" placeholder="Senha">
+                    </div>
                     <br>
-                    <button onclick="iniciarVariaveis1()" type="button">Confirmar</button>
+                    <button onclick="verificaValorSaque()" id="fazerOperacao" type="button">Confirmar</button>
     
-                    <strong id="mensagem"></strong>
                 </div>
             </form>
         </main>

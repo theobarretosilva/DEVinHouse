@@ -108,6 +108,22 @@ input::placeholder{
     border: 1px solid #370617;
 }
 
+.senha{
+    text-align: center;
+    margin-top: 30px;
+}
+#senha{
+    background-color: #808080;
+    color: #03071E;
+    margin-top: 7px;
+    padding-left: 8px;
+    padding-right: 150px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 4px;
+    border: 1px solid #370617;
+}
+
 #box_fundo button{
     background-color: #03071E;
     color: white;
