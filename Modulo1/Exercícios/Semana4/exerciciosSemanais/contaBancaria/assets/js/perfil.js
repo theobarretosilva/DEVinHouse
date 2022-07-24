@@ -29,20 +29,11 @@ let colocarNoSelect = (list) => {
 };
 
 window.onload = colocarNoSelect;
-
-function iniciarVariaveis1(){
-    const saqueOuDeposito = document.getElementById('saqueDeposito').value;
-    const idContaSelect = document.getElementById('contasClientes').value;
-    const valor = document.getElementById('valor').value;
-    /*let saldoDeAcordoId = contasClientes.forEach((id) => {
-        idContaSelect.saldo;
-    });*/
-
-}
     
 //-------------------------------------------EXERCICIO 4-----------------------------------------------------//
 function verificaValorSaque(){
 
+    const saldoContaDeAcordoId = contasClientes.map()
     const valor = document.getElementById('valor').value;
 
     if(valor <= 0){
@@ -71,8 +62,6 @@ function verificaValorDeposito(){
 function sacarOuDepositar(){
     const saqueOuDeposito = document.getElementById('saqueDeposito');
 
-    iniciarVariaveis1();
-
     if(saqueOuDeposito === "Sacar"){
         verificaValorSaque();
     }else if(saqueOuDeposito === "Depositar"){
@@ -80,12 +69,15 @@ function sacarOuDepositar(){
     }
 };
 
-function preenchimentoDeDados(){
+function verificarSenha(){
+    const senhaCliente = document.getElementById('senha');
     
+    if(senhaCliente === senhaDeAcordoId){
+        sacarOuDepositar();
+    }else{
+        alert("Senha inválida!")
+    }
 }
-
-const botao = document.getElementById('fazerOperacao');
-
 
 /*const validaValor = (valor)=> {
     if(isNaN(valor) || valor <= 0){
