@@ -1,4 +1,3 @@
-//-------------------------------------------EXERCICIO 3-----------------------------------------------------//
 const contasClientes = [
     {id: 1, nome: 'Raquel Barreto', saldo: 900000, senha: 1234},
     {id: 2, nome: 'Iran Silva', saldo: 10000, senha: 12345},
@@ -30,7 +29,6 @@ let colocarNoSelect = (list) => {
 
 window.onload = colocarNoSelect;
     
-//-------------------------------------------EXERCICIO 4-----------------------------------------------------//
 function verificaValorSaque(){
     let valor = parseFloat(document.getElementById('valor').value);
 
@@ -40,9 +38,6 @@ function verificaValorSaque(){
     });
     let saldoCliente = contaClienteDeAcordoId.saldo;
     let saldoFinal = saldoCliente - valor;
-    let contasAtualizadas = [...contasClientes, contaAtualizada];
-    console.log(contasAtualizadas);
-    let saldoAtual = contasAtualizadas[idCliente - 1].saldo;
 
     if(valor <= 0){
         alert("O valor digitado para saque é inválido");
@@ -50,12 +45,11 @@ function verificaValorSaque(){
     }else if(valor > saldoCliente){
         alert("Saldo insuficiente! " + "Seu saldo atual é: R$ " + saldoCliente);
     }else if(valor > 0 || valor < saldoCliente){
-        saldoAtual = saldoFinal;
-        alert("O saque foi feito com sucesso! Seu saldo atual é: R$ " + saldoAtual);
+        contasClientes[idCliente - 1].saldo = saldoCliente - valor;
+        alert("O saque foi feito com sucesso! Seu saldo atual é: R$ " + saldoFinal);
     }
 }
 
-//-------------------------------------------EXERCICIO 5-----------------------------------------------------//
 function verificaValorDeposito(){
     let valor = parseFloat(document.getElementById('valor').value);
 
@@ -64,28 +58,28 @@ function verificaValorDeposito(){
         return contaCliente.id === idCliente;
     });
     let saldoCliente = contaClienteDeAcordoId.saldo;
+    let saldoFinal = saldoCliente - valor;
 
     if(valor <= 0){
         alert("O valor digitado para depósito é inválido");
         return;
     }else if(valor > 0){
-        //atualizar array com o saldo atual da conta após depósito//
-        alert("O depósito foi realizado com sucesso! Seu saldo atual é: R$ " + saldoCliente)
+        let valorFinal = saldoCliente + valor;
+        contasClientes[idCliente - 1].saldo = valorFinal;
+        alert("O depósito foi realizado com sucesso! Seu saldo atual é: R$ " + saldoFinal)
     }
 }
 
-//-------------------------------------------EXERCICIO 6-----------------------------------------------------//
 function sacarOuDepositar(){
-    const saqueOuDeposito = document.getElementById('saqueDeposito');
+    const saqueOuDeposito = document.getElementById('saqueDeposito').value;
 
-    if(saqueOuDeposito === "Sacar"){
+    if(saqueOuDeposito == "Sacar"){
         verificaValorSaque();
-    }else if(saqueOuDeposito === "Depositar"){
+    }else if(saqueOuDeposito == "Depositar"){
         verificaValorDeposito();
     }
 };
 
-//-------------------------------------------EXERCICIO 7-----------------------------------------------------//
 function fazerOperacoes(){
     let senha = parseInt(document.getElementById('senha').value);
 
@@ -95,9 +89,25 @@ function fazerOperacoes(){
     });
     let senhaCliente = contaClienteDeAcordoId.senha;
     
-    if(senhaCliente != senha){
-        alert("Senha inválida!")
-    }else{
+    if(senha == senhaCliente){
         sacarOuDepositar();
+    }else{
+        alert("Senha inválida!")
+    }
+}
+
+function verificarCampos(){
+    let valor = parseFloat(document.getElementById('valor').value);
+    const saqueOuDeposito = document.getElementById('saqueDeposito').value;
+    let senha = parseInt(document.getElementById('senha').value);
+
+    if(!valor){
+        alert("Valor inválido! Digite um valor válido para continuar!")
+    }else if(saqueOuDeposito == "escolha"){
+        alert("Escolha entre saque ou depósito para continuar!");
+    }else if(!senha){
+        alert("Senha inválida! Digite uma senha válida para continuar!");
+    }else{
+        fazerOperacoes();
     }
 }

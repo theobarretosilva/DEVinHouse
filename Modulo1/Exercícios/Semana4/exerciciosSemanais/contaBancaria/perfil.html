@@ -37,7 +37,7 @@
                         <label id="labelSaqueDeposito" class="label" for="saqueDeposito">Você deseja sacar ou depositar?</label>
                         <br>
                         <select id="saqueDeposito">
-                            <option value="" selected disabled>Saque ou depósito</option>
+                            <option value="escolha" selected disabled>Saque ou depósito</option>
                             <option value="Sacar">Sacar</option>
                             <option value="Depositar">Depositar</option>
                         </select>
@@ -48,7 +48,7 @@
                         <input id="senha" type="number" placeholder="Senha">
                     </div>
                     <br>
-                    <button onclick="verificaValorDeposito()" id="fazerOperacao" type="button">Confirmar</button>
+                    <button onclick="verificarCampos()" id="fazerOperacao" type="button">Confirmar</button>
     
                 </div>
             </form>
