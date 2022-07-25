@@ -1,5 +1,5 @@
 //-------------------------------------------EXERCICIO 3-----------------------------------------------------//
-let contasClientes = [
+const contasClientes = [
     {id: 1, nome: 'Raquel Barreto', saldo: 900000, senha: 1234},
     {id: 2, nome: 'Iran Silva', saldo: 10000, senha: 12345},
     {id: 3, nome: 'Guilherme Barreto Silva', saldo: 3000, senha: 123456},
@@ -32,29 +32,45 @@ window.onload = colocarNoSelect;
     
 //-------------------------------------------EXERCICIO 4-----------------------------------------------------//
 function verificaValorSaque(){
+    let valor = parseFloat(document.getElementById('valor').value);
 
-    const saldoContaDeAcordoId = contasClientes.map()
-    const valor = document.getElementById('valor').value;
+    let idCliente = parseInt(document.getElementById('contasClientes').value);
+    let contaClienteDeAcordoId = contasClientes.find(function (contaCliente) {
+        return contaCliente.id === idCliente;
+    });
+    let saldoCliente = contaClienteDeAcordoId.saldo;
+    let saldoFinal = saldoCliente - valor;
+    let contasAtualizadas = [...contasClientes, contaAtualizada];
+    console.log(contasAtualizadas);
+    let saldoAtual = contasAtualizadas[idCliente - 1].saldo;
 
     if(valor <= 0){
         alert("O valor digitado para saque é inválido");
-    }/*else if(valor > saldoContaDeAcordoId){
-        alert("Saldo insuficiente! " + "Seu saldo atual é: R$ " + saldoContaDeAcordoId);
-    }else if(valor > 0 || valor < saldoContaDeAcordoId){
-        //atualizar array com o saldo atual da conta após saque//
-        alert("O saque foi feito com sucesso! Seu saldo atual é: R$ " + saldoContaDeAcordoId);
-    }*/
+        return;
+    }else if(valor > saldoCliente){
+        alert("Saldo insuficiente! " + "Seu saldo atual é: R$ " + saldoCliente);
+    }else if(valor > 0 || valor < saldoCliente){
+        saldoAtual = saldoFinal;
+        alert("O saque foi feito com sucesso! Seu saldo atual é: R$ " + saldoAtual);
+    }
 }
 
 //-------------------------------------------EXERCICIO 5-----------------------------------------------------//
 function verificaValorDeposito(){
-    const valor = document.getElementById('valor').value;
+    let valor = parseFloat(document.getElementById('valor').value);
+
+    let idCliente = parseInt(document.getElementById('contasClientes').value);
+    let contaClienteDeAcordoId = contasClientes.find(function (contaCliente) {
+        return contaCliente.id === idCliente;
+    });
+    let saldoCliente = contaClienteDeAcordoId.saldo;
 
     if(valor <= 0){
         alert("O valor digitado para depósito é inválido");
+        return;
     }else if(valor > 0){
         //atualizar array com o saldo atual da conta após depósito//
-        alert("O depósito foi realizado com sucesso! Seu saldo atual é: R$ " + saldoContaDeAcordoId)
+        alert("O depósito foi realizado com sucesso! Seu saldo atual é: R$ " + saldoCliente)
     }
 }
 
@@ -69,115 +85,19 @@ function sacarOuDepositar(){
     }
 };
 
-function verificarSenha(){
-    const senhaCliente = document.getElementById('senha');
+//-------------------------------------------EXERCICIO 7-----------------------------------------------------//
+function fazerOperacoes(){
+    let senha = parseInt(document.getElementById('senha').value);
+
+    let idCliente = parseInt(document.getElementById('contasClientes').value);
+    let contaClienteDeAcordoId = contasClientes.find(function (contaCliente) {
+        return contaCliente.id === idCliente;
+    });
+    let senhaCliente = contaClienteDeAcordoId.senha;
     
-    if(senhaCliente === senhaDeAcordoId){
-        sacarOuDepositar();
-    }else{
+    if(senhaCliente != senha){
         alert("Senha inválida!")
+    }else{
+        sacarOuDepositar();
     }
 }
-
-/*const validaValor = (valor)=> {
-    if(isNaN(valor) || valor <= 0){
-        console.log('Caiu!')
-        alert('Valor inválido!');
-        return false;
-    }
-    return true;
-}
-
-const atualizaSaldo = (contaAtual, saldo)=> {
-
-}
-
-const sacar = (contaAtual, valor)=> {
-    if(!validaValor(valor)){
-        return;
-    }
-
-    if(valor > contaAtual.saldo){
-        alert(`Saldo insuficiente. Saldo atual: ${contaAtual.saldo}`);
-        return;
-    }
-
-    const novoSaldo = contaAtual.saldo - valor;
-
-    const contaSemContaAtual = contasClientes.filter((c)=> c.id !== contaAtual.id);
-    const contasAtualizadas = [...contaSemContaAtual, {...contaAtual, saldo: novoSaldo}];
-
-    contasClientes = contasAtualizadas;
-
-    alert('Saque efetuado com sucesso! Saldo atual: R$ ' + novoSaldo);
-};
-
-const operacoes = (event)=> {
-    event.preventDefault();
-
-    sacar();
-}
-
-const depositar = (contaAtual, valor)=> {
-    if(isNaN(valor) || valor <= 0){
-        console.log('Caiu!')
-        alert('Valor inválido!');
-        return;
-    }
-
-    if(valor > contaAtual.saldo){
-        alert(`Saldo insuficiente. Saldo atual: ${contaAtual.saldo}`);
-        return;
-    }
-
-    const novoSaldo = contaAtual.saldo - valor;
-
-    const contaSemContaAtual = contasClientes.filter((c)=> c.id !== contaAtual.id);
-    contasAtualizadas = [...contaSemContaAtual, {...contaAtual, saldo: novoSaldo}];
-
-    contasClientes = contasAtualizadas;
-
-    alert('Saque efetuado com sucesso! Saldo atual: R$ ' + novoSaldo);
-};*/
-
-/*
-let selectSaque = document.getElementById("saqueDeposito");
-let contaSelecionada = document.querySelector('#contasClientes');
-//let idSelecionado = contaSelecionada.options[contaSelecionada.selectedIndex].value;
-
-console.log(saldoDeAcordoId);
-
-function sacar(valor, idConta){
-
-    let opcaoSaque = selectSaque.options[selectSaque.selectedIndex].value;
-    
-    if(opcaoSaque === "Sacar"){
-        if(valor <= 0){
-            alert("O valor digitado para saque é inválido");
-        }else if(valor > saldoContaDeAcordoId){
-            alert("Saldo insuficiente! " + "Seu saldo atual é: R$ " + saldoContaDeAcordoId);
-        }else if(valor > 0 || valor < saldoConta){
-            //atualizar array com o saldo atual da conta após saque//
-            alert("O saque foi feito com sucesso! Seu saldo atual é: R$ " + saldoContaDeAcordoId);
-        }
-    }
-};
-
-function depositar(valor, idConta){
-
-    let opcaoDeposito = selectSaque.options[selectSaque.selectedIndex].value;
-
-    if(opcaoDeposito === "Depositar"){
-        if(valor <= 0){
-            alert("O valor digitado para depósito é inválido");
-        }else if(valor > 0){
-            //atualizar array com o saldo atual da conta após depósito//
-            alert("O depósito foi feito com sucesso! Seu saldo atual é: R$ " + saldoContaDeAcordoId)
-        }
-    }
-}
-
-function depositoOuSaque(){
-    sacar();
-    depositar();
-}*/
