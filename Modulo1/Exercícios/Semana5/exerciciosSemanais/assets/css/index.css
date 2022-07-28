@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;800&family=Urbanist:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap');
+
+body{
+    background-color: antiquewhite;
+}
+
+.cabecalho{
+    text-align: center;
+    background-color: cadetblue;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+.titulo{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: black;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.subtitulo{
+    font-family: 'Gentium Book Plus', serif;
+    text-align: center;
+    font-size: 30px;
+}
+

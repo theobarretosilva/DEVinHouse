@@ -1,8 +1,7 @@
 import { saudacao } from "./saudacao.js";
-import { saudacaoEsp as saudacaoEspecial } from "./saudacao-especial.js";
+import saudacaoEspecial from "./saudacao-especial.js";
 
 console.log(saudacaoEspecial("Théo"))
-window.onload(console.log(saudacao));
 
 class Produto{
     nome;
@@ -17,3 +16,35 @@ class Produto{
         this.quantidade = quantidade;
     }
 }
+
+class Pedido{
+    numeroPedido;
+    dataPedido;
+    estaPago;
+    listaProdutos;
+    nomeCliente;
+
+    constructor(numero, cliente){
+        this.numeroPedido = numero;
+        this.dataPedido = new Date().toLocaleDateString();
+        this.estaPago = false;
+        this.listaProdutos = [];
+        this.nomeCliente = cliente;
+
+    }
+
+    adicionarProduto(Produto){
+        listaProdutos.push(Produto);
+    }
+
+    calcularTotal(){
+        
+    }
+}
+
+const novoPedido = new Pedido;
+novoPedido.numeroPedido = prompt("Qual o número do pedido?");
+novoPedido.dataPedido = new Date().toLocaleDateString();
+novoPedido.estaPago = false;
+novoPedido.listaProdutos = [];
+novoPedido.nomeCliente = prompt("Qual o nome do cliente?");
