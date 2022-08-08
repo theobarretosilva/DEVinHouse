@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap');
 
 body{
-    background-color: antiquewhite;
+    background-color: #E4F7C8;
 }
 
 .cabecalho{
     text-align: center;
-    background-color: cadetblue;
+    background-color: #FDFAB9;
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 10px;
@@ -26,3 +26,14 @@ body{
     font-size: 30px;
 }
 
+#section1{
+    background-color: #8fe5ffaf;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.tituloPedido{
+    font-size: large;
+}
