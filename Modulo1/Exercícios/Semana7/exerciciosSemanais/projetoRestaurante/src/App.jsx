@@ -1,5 +1,6 @@
 import './App.css'
 import { Navbar } from './components/Navbar/Navbar';
+import { Rodape } from './components/Rodape/Rodape';
 import { Titulo } from './components/Titulo/Titulo';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Navbar />
       <Titulo />
+      <Rodape />
     </div>
   )
 }
