@@ -5,11 +5,10 @@ import PropType from 'prop-types'
 
 export const Navbar = () => {
     return (
-        <nva>
-           <img src={logo} alt="Logo do Restheorante" />
-           <p>Restheorante</p>
-           <a>Cardápio</a>
-        </nva >
+        <nav className="navbar">
+           <img id="logo" src={logo} alt="Logo do Restheorante" />
+           <p id="tituloNav">Restheorante</p>
+           <a href="" id="linkCardapio"><strong>Cardápio</strong></a>
+        </nav >
     )
-    
 }
