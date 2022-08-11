@@ -3,7 +3,6 @@ import { Navbar } from './components/Navbar/Navbar';
 import { Rodape } from './components/Rodape/Rodape';
 import { Titulo } from './components/Titulo/Titulo';
 import { Card } from './components/Card/Card';
-import { Secoes } from './components/Secoes/Secoes';
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
           preco: "R$ 24,90",
         }}
       />
-      <Secoes />
       <Rodape />
     </div>
   )
