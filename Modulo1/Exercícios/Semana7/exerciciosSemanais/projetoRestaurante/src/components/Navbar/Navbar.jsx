@@ -7,7 +7,7 @@ export const Navbar = () => {
     return (
         <nav className="navbar">
            <img id="logo" src={logo} alt="Logo do Restheorante" />
-           <p id="tituloNav">Restheorante</p>
+           <p id="tituloNav">Res<span className="theo">theo</span>rante</p>
            <a href="" id="linkCardapio"><strong>Cardápio</strong></a>
         </nav >
     )
