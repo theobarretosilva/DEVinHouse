@@ -53,7 +53,10 @@
     font-size: 18px;
     line-height: 17px;
     color: black;
-    margin: 2%;
+    margin: 5%;
+    padding-top: 10px;
+    padding-bottom: 26px;
+    border-bottom: 2px solid white;
 }
 
 .linha{
