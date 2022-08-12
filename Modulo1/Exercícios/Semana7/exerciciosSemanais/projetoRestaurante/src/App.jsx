@@ -1,14 +1,13 @@
 import './App.css'
 import { Navbar } from './components/Navbar/Navbar';
 import { Rodape } from './components/Rodape/Rodape';
-import { Titulo } from './components/Titulo/Titulo';
 import { Card } from './components/Card/Card';
+import { Secoes } from './components/Secoes/Secoes';
 
 function App() {
   return (
-    <div id='divPrincipal'>
+    <div className='divPrincipal'>
       <Navbar />
-      <Titulo />
       {/* <Card 
         card = {{
           img: 'https://www.dicasdemulher.com.br/wp-content/uploads/2021/05/entradas-para-jantar-00.png',
@@ -19,6 +18,7 @@ function App() {
           preco: "R$ 24,90",
         }}
       /> */}
+      <Secoes />
       <Rodape />
     </div>
   )

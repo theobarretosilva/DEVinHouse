@@ -1,3 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.divGeralSecoes{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+}
+
 #div1{
-    background-color: ;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 200px;
+    height: 100px;
+}
+
+#div2{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.secoes{
+    background-color: #666666;
+}
+
+.nomeSecao{
+    font-family: 'Urbanist', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 17px;
+    color: black;
+}
+
+.linha{
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #FFFFFF;
+    width: 80%;
 }

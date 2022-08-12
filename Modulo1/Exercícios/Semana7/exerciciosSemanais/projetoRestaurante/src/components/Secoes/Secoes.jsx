@@ -4,23 +4,27 @@ import './Secoes.css'
 
 export const Secoes = () => {
     return(
-        <div>
+        <div className='divGeralSecoes'>
             <div id='div1'></div>
-            <div>
+            <div className='secoes'>
                 <div>
-                    <h2>Entradas</h2>
+                    <h2 className='nomeSecao'>Entradas</h2>
                 </div>
+                <div className='linha'></div>
                 <div>
-                    <h2>Saladas</h2>
+                    <h2 className='nomeSecao'>Saladas</h2>
                 </div>
+                <div className='linha'></div>
                 <div>
-                    <h2>Pratos principais</h2>
+                    <h2 className='nomeSecao'>Pratos principais</h2>
                 </div>
+                <div className='linha'></div>
                 <div>
-                    <h2>Sobremesas</h2>
+                    <h2 className='nomeSecao'>Sobremesas</h2>
                 </div>
+                <div className='linha'></div>
                 <div>
-                    <h2>Bebidas</h2>
+                    <h2 className='nomeSecao'>Bebidas</h2>
                 </div>
             </div>
             <div id='div2'></div>
