@@ -9,7 +9,7 @@ function App() {
     <div id='divPrincipal'>
       <Navbar />
       <Titulo />
-      <Card 
+      {/* <Card 
         card = {{
           img: 'https://www.dicasdemulher.com.br/wp-content/uploads/2021/05/entradas-para-jantar-00.png',
           descricaoImg: "Bruschetta de tomates confit",
@@ -18,7 +18,7 @@ function App() {
           tempoPreparo: "Tempo de preparo: 15 minutos",
           preco: "R$ 24,90",
         }}
-      />
+      /> */}
       <Rodape />
     </div>
   )
