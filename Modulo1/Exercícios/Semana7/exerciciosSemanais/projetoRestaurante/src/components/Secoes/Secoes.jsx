@@ -1,6 +1,7 @@
 import { func } from 'prop-types';
 import { Card } from '../Card/Card';
 import './Secoes.css'
+import secoes from '../../secoes.json'
 
 export const Secoes = () => {
     return(
@@ -9,16 +10,14 @@ export const Secoes = () => {
             <div className='secoes'>
                 <div>
                     <h2 className='nomeSecao'>Entradas</h2>
-                        { <Card 
-                            card = {{
-                            img: 'https://www.dicasdemulher.com.br/wp-content/uploads/2021/05/entradas-para-jantar-00.png',
-                            descricaoImg: "Bruschetta de tomates confit",
-                            nomePrato: "Bruschetta de tomates confit",
-                            descricaoPrato: "Bruschetta de tomates confit com manjericões frescos",
-                            tempoPreparo: "Tempo de preparo: 15 minutos",
-                            preco: "R$ 24,90",
-                            }}
-                        /> }
+                        {/* {secoes.entradas.map((item, index) => {
+                            return(
+                                <Card 
+                                    card = {item}
+                                    key = {index}
+                                />
+                            )
+                        })  } */}
                 </div>
                 <div>
                     <h2 className='nomeSecao'>Saladas</h2>
