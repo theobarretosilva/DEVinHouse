@@ -29,7 +29,7 @@ export const Secoes = () => {
                     <h2 className='nomeSecao'>Sobremesas</h2>
                 </div>
                 <div>
-                    <h2 className='nomeSecao'>Bebidas</h2>
+                    <h2 id='nomeSecao'>Bebidas</h2>
                 </div>
             </div>
             <div id='div2'></div>
