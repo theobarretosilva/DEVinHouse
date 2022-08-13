@@ -12,19 +12,19 @@ export const Secoes = ({entradas, saladas, pratosPrincipais, sobremesas, bebidas
         <div id="div1"></div>
         <div className="secoes">
           <div>
-            <h2 className="nomeSecao">{entradas}</h2>
+            <a href=""><h2 className="nomeSecao">{entradas}</h2></a>
           </div>
           <div>
-            <h2 className="nomeSecao">{saladas}</h2>
+            <a href=""><h2 className="nomeSecao">{saladas}</h2></a>
           </div>
           <div>
-            <h2 className="nomeSecao">{pratosPrincipais}</h2>
+            <a href=""><h2 className="nomeSecao">{pratosPrincipais}</h2></a>
           </div>
           <div>
-            <h2 className="nomeSecao">{sobremesas}</h2>
+            <a href=""><h2 className="nomeSecao">{sobremesas}</h2></a>
           </div>
           <div>
-            <h2 id="nomeSecao">{bebidas}</h2>
+            <a href=""><h2 id="nomeSecao">{bebidas}</h2></a>
           </div>
         </div>
         <div id="div2"></div>
