@@ -14,13 +14,11 @@
 /* body{
     content: ' ';
     display: block;
-    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    filter: blur(60px);
-    background-image: url('../../../public/fachadaRestaurante.jpg');
+    background-image: url('../../assets/imgs/fachadaRestheorante.png');
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
@@ -29,7 +27,7 @@
 #div1{
     background: rgba(0, 0, 0, 0.5);
     width: 180px;
-    height: 170px;
+    height: 140px;
 }
 
 #div2{

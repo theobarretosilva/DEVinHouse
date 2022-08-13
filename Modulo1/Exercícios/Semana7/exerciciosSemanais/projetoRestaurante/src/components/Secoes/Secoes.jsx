@@ -37,6 +37,12 @@ export const Secoes = ({entradas, saladas, pratosPrincipais, sobremesas, bebidas
         {secoes.saladas.map((item, index) => {
           return <Card card={item} key={index} />;
         })}
+        {secoes.pratosPrincipais.map((item, index) => {
+          return <Card card={item} key={index} />;
+        })}
+        {secoes.sobremesas.map((item, index) => {
+          return <Card card={item} key={index} />;
+        })}
       </div>
     </div>
   );

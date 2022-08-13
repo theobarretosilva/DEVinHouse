@@ -106,7 +106,7 @@
         },
 
         {
-            "img": "https://truffle-assets.imgix.net/024f88e7-coq-au-vin_l_thumb.jpg",
+            "img": "https://www.borbulhante.com/wp-content/uploads/2020/10/coq-au-vin-768x512-1-1200x900.jpeg",
             "descricaoImg": "Coq au vin",
             "nomePrato": "Coq au vin",
             "descricaoPrato": "Clássico francês feito com frango, vinho tinto e cogumelos",
@@ -118,7 +118,7 @@
             "img": "https://pt.rotasgastronomicas.com/imagens/gastronomia/fr/large/gastro1-6007-5809-lobster_thermidor.jpg",
             "descricaoImg": "Lagosta à Thermidor",
             "nomePrato": "Lagosta à Thermidor",
-            "descricaoPrato": "Feita com lagosta, creme de leite, vinho, champignon e queijo prato",
+            "descricaoPrato": "Feita com lagosta, creme de leite, vinho e queijo prato",
             "tempoPreparo": "Tempo de preparo: 55 minutos",
             "preco": "R$ 50,90"
         },
@@ -136,12 +136,57 @@
             "img": "https://www.receitas-sem-fronteiras.com/cache/slideshow/gettyimages-1128987090.jpg/2cb6823c975ee09b0d93e071c71c86d5.jpg",
             "descricaoImg": "Risoto de camarões",
             "nomePrato": "Risoto de camarões",
-            "descricaoPrato": "Risoto de camarões com um toque de essência de trufa negra",
+            "descricaoPrato": "Risoto de camarões com essência de trufa negra",
             "tempoPreparo": "Tempo de preparo: 35 minutos",
             "preco": "R$ 47,90"
         }
+    ],
 
+    "sobremesas": [
+
+        {
+            "img": "https://marettimo.com.br/blog/wp-content/uploads/2021/09/historia-do-tiramisu-1578333856-1040x619.jpg",
+            "descricaoImg": "Tiramisù",
+            "nomePrato": "Tiramisù",
+            "descricaoPrato": "Sobremesa italiana com café, mascarpone e biscoitos",
+            "tempoPreparo": "Tempo de preparo: 8 minutos",
+            "preco": "R$ 28,90"
+        },
+
+        {
+            "img": "https://receitatodahora.com.br/wp-content/uploads/2022/02/petit-gateau-scaled.jpg",
+            "descricaoImg": "Petit gateau",
+            "nomePrato": "Petit gateau",
+            "descricaoPrato": "Petit gateau servido com sorvete de creme",
+            "tempoPreparo": "Tempo de preparo: 12 minutos",
+            "preco": "R$ 28,90"
+        },
+
+        {
+            "img": "https://www.cozinhatecnica.com/wp-content/uploads/2014/10/cheesecake-tradicional-com-calda-de-morango-scaled.jpg",
+            "descricaoImg": "Cheesecake",
+            "nomePrato": "Cheesecake",
+            "descricaoPrato": "Sobremesa com cream cheese, biscoito e coulis de morango",
+            "tempoPreparo": "Tempo de preparo: 10 minutos",
+            "preco": "R$ 19,90"
+        },
+
+        {
+            "img": "https://img.itdg.com.br/tdg/images/blog/uploads/2017/09/shutterstock_251422414.jpg?w=1200",
+            "descricaoImg": "Crêpe Suzette",
+            "nomePrato": "Crêpe Suzette",
+            "descricaoPrato": "Flambado e saborizado com laranja e manteiga perfumada",
+            "tempoPreparo": "Tempo de preparo: 15 minutos",
+            "preco": "R$ 27,90"
+        },
+
+        {
+            "img": "https://img.cybercook.com.br/receitas/523/banoffee-pie-3.jpeg",
+            "descricaoImg": "Choco Banoffe",
+            "nomePrato": "Choco Banoffe",
+            "descricaoPrato": "Sobremesa com base crocante, brigadeiro e rodelas de banana",
+            "tempoPreparo": "Tempo de preparo: 20 minutos",
+            "preco": "R$ 38,90"
+        }
     ]
-
-
 }
