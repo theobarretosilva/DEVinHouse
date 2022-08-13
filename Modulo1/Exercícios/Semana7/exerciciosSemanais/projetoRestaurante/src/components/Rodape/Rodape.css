@@ -10,6 +10,7 @@
 .divGeral{
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .divGeral2{
@@ -51,6 +52,12 @@
   bottom: 0;
   position: relative;
   margin-right: 1%;
+}
+
+.divCopy{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .icons{

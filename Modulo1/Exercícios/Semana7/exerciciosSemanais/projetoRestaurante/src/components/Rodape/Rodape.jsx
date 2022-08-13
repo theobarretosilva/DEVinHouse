@@ -30,7 +30,9 @@ export const Rodape = () => {
                         </div>
                     </div>
                 </div>
-                <p id='copyright'>Copyright &copy; 2022 Restheorante</p>
+                <div className='divCopy'>
+                    <p id='copyright'>Copyright &copy; 2022 Restheorante</p>
+                </div>
             </div>
         </footer>
         

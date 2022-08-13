@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 
 export const Card = ({card: {img, descricaoImg, nomePrato, descricaoPrato, tempoPreparo, preco}}) => {
     return (
-        <div>
-            <img src={img} alt={descricaoImg} />
-            <h5>{nomePrato}</h5>
-            <p>{descricaoPrato}</p>
-            <p>{tempoPreparo}</p>
-            <p>{preco}</p>
+        <div className='card'>
+            <img className='img' src={img} alt={descricaoImg} />
+            <h5 className='nome'>{nomePrato}</h5>
+            <p className='descricao'>{descricaoPrato}</p>
+            <p className='tempo'>{tempoPreparo}</p>
+            <p className='preco'>{preco}</p>
         </div>
     )
 }

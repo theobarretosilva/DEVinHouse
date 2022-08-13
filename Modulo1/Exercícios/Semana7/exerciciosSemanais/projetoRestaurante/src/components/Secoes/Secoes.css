@@ -2,10 +2,13 @@
 
 .divGeralSecoes{
     display: flex;
-    flex-direction: column;
-    left: 0;
     text-align: center;
-    top: 0;
+}
+
+.divSecoes{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
 }
 
 /* body{
@@ -16,7 +19,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.6;
+    filter: blur(60px);
     background-image: url('../../../public/fachadaRestaurante.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -26,14 +29,14 @@
 #div1{
     background: rgba(0, 0, 0, 0.5);
     width: 180px;
-    height: 100px;
+    height: 170px;
 }
 
 #div2{
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     width: 180px;
-    height: 100px;
+    height: 100%;
 }
 
 .secoes{
@@ -74,4 +77,13 @@
     justify-content: center;
     border: 1px solid #FFFFFF;
     width: 80%;
+}
+
+.secoesCards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
