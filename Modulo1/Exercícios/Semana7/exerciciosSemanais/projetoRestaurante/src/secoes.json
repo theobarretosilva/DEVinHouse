@@ -4,7 +4,7 @@
             "img": "https://www.dicasdemulher.com.br/wp-content/uploads/2021/05/entradas-para-jantar-00.png",
             "descricaoImg": "Bruschetta de tomates confit",
             "nomePrato": "Bruschetta de tomates confit",
-            "descricaoPrato": "Bruschetta de tomates confit com manjericões frescos.",
+            "descricaoPrato": "Bruschetta de tomates confit com manjericões frescos",
             "tempoPreparo": "Tempo de preparo: 10 minutos",
             "preco": "R$ 24,90"
         },
@@ -13,7 +13,7 @@
             "img": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-3934-46128628e1c3f8c74522ae28722e9d5e.jpg",
             "descricaoImg": "Coquetel de camarão",
             "nomePrato": "Coquetel de camarão",
-            "descricaoPrato": "Coquetel de camarões dourados com aïoli.",
+            "descricaoPrato": "Coquetel de camarões dourados com aïoli",
             "tempoPreparo": "Tempo de preparo: 15 minutos",
             "preco": "R$ 28,90"
         },
@@ -22,7 +22,7 @@
             "img": "https://s2.glbimg.com/D4BgwlmmJDWtjPxG4T9_8OwGPGY=/0x0:1080x608/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2022/J/7/Gj5zz6SmOaY3jRJ1z9mQ/capa-materia-gshow-16-.png",
             "descricaoImg": "Dadinhos de tapioca",
             "nomePrato": "Dadinhos de tapioca",
-            "descricaoPrato": "Famosos dadinhos de tapioca com queijo-de-coalho.",
+            "descricaoPrato": "Famosos dadinhos de tapioca com queijo-de-coalho",
             "tempoPreparo": "Tempo de preparo: 20 minutos",
             "preco": "R$ 25,90"
         },
@@ -31,7 +31,7 @@
             "img": "https://obagastronomia.com.br/wp-content/uploads/2018/01/C-figo_com_brie_1.jpg",
             "descricaoImg": "Figos com brie e mel",
             "nomePrato": "Figos com brie e mel",
-            "descricaoPrato": "Figos colhidos diariamente com Brie e Mel de Tubuna.",
+            "descricaoPrato": "Figos colhidos diariamente com Brie e Mel de Tubuna",
             "tempoPreparo": "Tempo de preparo: 6 minutos",
             "preco": "R$ 21,90"
         },
@@ -40,7 +40,7 @@
             "img": "https://www.comidaereceitas.com.br/img/sizeswp/1200x675/2015/10/brusqueta_abobrinha_parmesao.jpg",
             "descricaoImg": "Bruschetta de abobrinha",
             "nomePrato": "Bruschetta de abobrinha",
-            "descricaoPrato": "Bruschetta com abobrinha e toques de parmesão e mel.",
+            "descricaoPrato": "Bruschetta com abobrinha e toques de parmesão e mel",
             "tempoPreparo": "Tempo de preparo: 16 minutos",
             "preco": "R$ 24,90"
         }
@@ -61,7 +61,7 @@
             "img": "https://folhago.com.br/blogs/receitas-faceis/wp-content/uploads/2021/07/Salada-mediterranea-teleculinaria-scaled.jpg",
             "descricaoImg": "Salada mediterrânea",
             "nomePrato": "Salada mediterrânea",
-            "descricaoPrato": "A salada mistura folhas verdes com legumes e grãos.",
+            "descricaoPrato": "A salada mistura folhas verdes com legumes e grãos",
             "tempoPreparo": "Tempo de preparo: 18 minutos",
             "preco": "R$ 27,90"
         },
@@ -70,7 +70,7 @@
             "img": "https://storage.googleapis.com/imagens_videos_gou_cooking_prod/production/mesas/2020/12/63b6932e-img_5052.jpg",
             "descricaoImg": "Salada fattoush",
             "nomePrato": "Salada fattoush",
-            "descricaoPrato": "A salada fattoush é colorida e crocante, com molho de romã.",
+            "descricaoPrato": "A salada fattoush é colorida e crocante, com molho de romã",
             "tempoPreparo": "Tempo de preparo: 20 minutos",
             "preco": "R$ 28,90"
         },
@@ -79,7 +79,7 @@
             "img": "https://img.cybercook.com.br/receitas/71/salada-primavera-6.jpeg",
             "descricaoImg": "Salada primavera",
             "nomePrato": "Salada primavera",
-            "descricaoPrato": "A salada com folhas verdes, tomate, palmito e manga.",
+            "descricaoPrato": "A salada com folhas verdes, tomate, palmito e manga",
             "tempoPreparo": "Tempo de preparo: 15 minutos",
             "preco": "R$ 27,90"
         },
@@ -88,9 +88,57 @@
             "img": "https://img.itdg.com.br/tdg/images/recipes/000/007/329/284006/284006_original.jpg?w=1200",
             "descricaoImg": "Salada caesar",
             "nomePrato": "Salada caesar",
-            "descricaoPrato": "Salada com alface, parmesão, croutons e molho Caesar.",
+            "descricaoPrato": "Salada com alface, parmesão, croutons e molho Caesar",
             "tempoPreparo": "Tempo de preparo: 15 minutos",
             "preco": "R$ 30,90"
+        }
+    ],
+
+    "pratosPrincipais": [
+
+        {
+            "img": "https://s2.glbimg.com/AF2f-IhIurYQxvsCrt6JMMAnnLA=/1200x/smart/filters:cover():strip_icc()/s03.video.glbimg.com/x720/5781542.jpg",
+            "descricaoImg": "Mignon ao molho de ervas",
+            "nomePrato": "Mignon ao molho de ervas",
+            "descricaoPrato": "Medalhão servido com o molho de ervas e pimenta calabresa",
+            "tempoPreparo": "Tempo de preparo: 40 minutos",
+            "preco": "R$ 48,90"
+        },
+
+        {
+            "img": "https://truffle-assets.imgix.net/024f88e7-coq-au-vin_l_thumb.jpg",
+            "descricaoImg": "Coq au vin",
+            "nomePrato": "Coq au vin",
+            "descricaoPrato": "Clássico francês feito com frango, vinho tinto e cogumelos",
+            "tempoPreparo": "Tempo de preparo: 55 minutos",
+            "preco": "R$ 51,90"
+        },
+
+        {
+            "img": "https://pt.rotasgastronomicas.com/imagens/gastronomia/fr/large/gastro1-6007-5809-lobster_thermidor.jpg",
+            "descricaoImg": "Lagosta à Thermidor",
+            "nomePrato": "Lagosta à Thermidor",
+            "descricaoPrato": "Feita com lagosta, creme de leite, vinho, champignon e queijo prato",
+            "tempoPreparo": "Tempo de preparo: 55 minutos",
+            "preco": "R$ 50,90"
+        },
+
+        {
+            "img": "https://img.itdg.com.br/tdg/images/recipes/000/050/782/100605/100605_original.jpg",
+            "descricaoImg": "Capeletti in Brodo",
+            "nomePrato": "Capeletti in Brodo",
+            "descricaoPrato": "Feita com Capeletti, alho-poró e salsão",
+            "tempoPreparo": "Tempo de preparo: 35 minutos",
+            "preco": "R$ 44,90"
+        },
+
+        {
+            "img": "https://www.receitas-sem-fronteiras.com/cache/slideshow/gettyimages-1128987090.jpg/2cb6823c975ee09b0d93e071c71c86d5.jpg",
+            "descricaoImg": "Risoto de camarões",
+            "nomePrato": "Risoto de camarões",
+            "descricaoPrato": "Risoto de camarões com um toque de essência de trufa negra",
+            "tempoPreparo": "Tempo de preparo: 35 minutos",
+            "preco": "R$ 47,90"
         }
 
     ]

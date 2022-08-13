@@ -7,7 +7,13 @@ function App() {
   return (
     <div className='divPrincipal'>
       <Navbar />
-      <Secoes />
+      <Secoes 
+        entradas = "Entradas"
+        saladas = "Saladas"
+        pratosPrincipais = "Pratos principais"
+        sobremesas = "Sobremesas"
+        bebidas = "Bebidas"
+        />
       <Rodape />
     </div>
   )

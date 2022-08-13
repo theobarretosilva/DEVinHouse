@@ -4,9 +4,7 @@ import "./Secoes.css";
 import secoes from "../../secoes.json";
 import PropTypes from 'prop-types'
 
-const secoesPratos = ["Entradas", "Saladas", "Pratos principais", "Sobremesas", "Bebidas"];
-
-export const Secoes = () => {
+export const Secoes = ({entradas, saladas, pratosPrincipais, sobremesas, bebidas}) => {
 
   return (
     <div className="divGeralSecoes">
@@ -14,19 +12,19 @@ export const Secoes = () => {
         <div id="div1"></div>
         <div className="secoes">
           <div>
-            <h2 className="nomeSecao">ENtradas</h2>
+            <h2 className="nomeSecao">{entradas}</h2>
           </div>
           <div>
-            <h2 className="nomeSecao">Saladas</h2>
+            <h2 className="nomeSecao">{saladas}</h2>
           </div>
           <div>
-            <h2 className="nomeSecao">Pratos principais</h2>
+            <h2 className="nomeSecao">{pratosPrincipais}</h2>
           </div>
           <div>
-            <h2 className="nomeSecao">Sobremesas</h2>
+            <h2 className="nomeSecao">{sobremesas}</h2>
           </div>
           <div>
-            <h2 id="nomeSecao">Bebidas</h2>
+            <h2 id="nomeSecao">{bebidas}</h2>
           </div>
         </div>
         <div id="div2"></div>
@@ -48,9 +46,13 @@ Secoes.propTypes = {
   card: PropTypes.shape({
     item: PropTypes.array.isRequired,
     index: PropTypes.number.isRequired
-  })
+  }),
 
-  // Secoes: PropTypes.shape({
-    
-  // })
+  secoes: PropTypes.shape({
+    entradas: PropTypes.string.isRequired,
+    saladas: PropTypes.string.isRequired,
+    pratosPrincipais: PropTypes.string.isRequired,
+    sobremesas: PropTypes.string.isRequired,
+    bebidas: PropTypes.string.isRequired
+  })
 }
