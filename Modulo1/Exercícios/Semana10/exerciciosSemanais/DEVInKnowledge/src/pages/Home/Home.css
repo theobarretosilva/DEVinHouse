@@ -5,7 +5,7 @@
 
 
 
-.formDica{
+/* .formDica{
     padding-top: 10px;
     padding-left: 20px;
 }
@@ -74,14 +74,15 @@
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-}
+} */
 
 header{
     height: auto;
     top: 0;
 }
 
-.navegacao{
+/* .navegacao{
+    height: auto;
     position: fixed;
     top: 0;
     right: 0;
@@ -115,9 +116,9 @@ header{
     text-align: center;
     font-size: 18px;
     font-family: 'Arbutus Slab', sans-serif;
-}
+} */
 
-.pesquisaDicas{
+/* .pesquisaDicas{
     position: fixed;
     right: 0;
     width: 70.3%;
@@ -163,7 +164,7 @@ header{
 #imgLimpa{
     width: 22px;
     padding-top: 3px;
-}
+} */
 
 .cardDicas{
     position: absolute;
