@@ -1,4 +1,4 @@
-# Repositório contendo sugestão de resolução dos exercícios propostos da semana 07
+# Repositório contendo projeto desenvolvido durante as aulas de React do módulo 1
 
 Projeto React criado utilizando [Vite](https://vitejs.dev/)
 
@@ -7,14 +7,14 @@ Projeto React criado utilizando [Vite](https://vitejs.dev/)
 Para clonar o repositório é preciso executar o comando
 
 ```
-git clone git@github.com:DEVin-Intelbras/aula-semana-07.git
+git clone git@github.com:DEVin-Intelbras/devinbras.git
 ```
 
 Para instalar as dependencias é preciso executar o comando **npm install**:
 
 ```
 // Acessar a pasta do projeto
-cd aula-semana-07
+cd devinbras
 
 // Instalar as dependencias do projeto
 npm install
@@ -48,11 +48,11 @@ Executa o aplicativo para produção da pasta dist
 npm run preview
 ```
 
-## Projeto Cardápio Restaurante
+## Projeto Aplicado
 
 O objetivo é a criação de uma aplicação web utilizando React.
-Basicamente se trata de um cardápio online que tem por objetivo apresentar as opções disponíveis de um restaurante, de forma categorizada.
+O projeto a ser desenvolvido é uma spa (single page application), simulando um portfólio de produtos e informações da empresa.
+Durante a aula de hoje vamos desenvolver a página de listagem de produtos.
+Para simular o dia a dia nas empresas vamos seguir um layout desenvolvido no figma.
 
-![Screen Shot 2022-08-14 at 00 20 01](https://user-images.githubusercontent.com/66982809/184521083-70fe0392-eacb-4a80-8105-28fb475eff86.png)
-
-![image](https://user-images.githubusercontent.com/66982809/184521099-f91a303a-01c7-4311-a4d2-920cdad66968.png)
+[Link do figma](https://www.figma.com/file/YszgWWhUqdTgteuqG5ZCMw/DevInBras?node-id=0%3A1)

@@ -3,18 +3,18 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: #181717;
-  padding: 20px 40px;
+  background-color: var(--brand-green);
+  padding: 70px 60px;
 }
 
 .sectionInfo {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 
 .sectionInfoTitle {
-  color: #37b000;
+  color: var(--white);
   font-size: 40px;
   line-height: 52px;
   font-weight: 400;
@@ -23,10 +23,18 @@
 .sectionInfoDescription {
   font-size: 14px;
   line-height: 18px;
-  color: #fffaf1;
+  color: var(--brand-beige);
 }
 
 .sectionSocialMidia {
   display: flex;
   gap: 32px;
+}
+
+@media (max-width: 600px) {
+  .containerFooter {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px;
+  }
 }

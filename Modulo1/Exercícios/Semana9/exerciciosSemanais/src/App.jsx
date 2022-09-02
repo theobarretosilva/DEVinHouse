@@ -1,63 +1,25 @@
-import { Footer, Header, Secao, FiltroSecao } from '@components';
-import { produtos } from '@services';
-import { useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import styles from './App.module.css';
+import { BrowserRouter } from "react-router-dom";
 
-function App() {
-  const [filtro, setFiltro] = useState(null);
+import { Header, Footer } from "@components";
+import { Router } from "@router";
+import { AutenticacaoProvider } from "@contexts";
 
-  const secoes = Array.from(new Set(produtos.map((prod) => prod.secao)));
+import "./assets/css/app.css";
 
-  const obterProdutosSecao = (secao) => {
-    return produtos.filter((p) => p.secao === secao);
-  };
-
-  const obterSubSecoes = (secao) => {
-    const produtosComSubSecoes = obterProdutosSecao(secao).filter((p) => p.subSecao);
-
-    return Array.from(new Set(produtosComSubSecoes.map((p) => p.subSecao)));
-  };
-
-  const obterSecoesFiltradas = () => {
-    if (filtro) {
-      return secoes.filter((s) => s === filtro);
-    }
-    return secoes;
-  };
-
-  const handleSelecionarSecao = (secao) => {
-    if (secao === filtro) {
-      setFiltro(null);
-      return;
-    }
-    setFiltro(secao);
-  };
-
+export function App() {
   return (
     <BrowserRouter>
-      <div className={styles.app}>
-        <Header />
-        <main className={styles.main}>
-          <FiltroSecao
-            secoes={secoes}
-            secaoSelecionada={filtro}
-            onSelecionar={handleSelecionarSecao}
-          />
+      <AutenticacaoProvider>
+        <div className="app">
+          <Header />
 
-          {obterSecoesFiltradas().map((secao) => (
-            <Secao
-              key={secao}
-              nome={secao}
-              produtos={obterProdutosSecao(secao)}
-              subSecoes={obterSubSecoes(secao)}
-            />
-          ))}
-        </main>
-        <Footer />
-      </div>
+          <main className="main">
+            <Router />
+          </main>
+
+          <Footer />
+        </div>
+      </AutenticacaoProvider>
     </BrowserRouter>
   );
 }
-
-export default App;
