@@ -1,6 +1,6 @@
 const pizzas = [
     {
-        "id": "",
+        "id": "1",
         "name": "",
         "description": "",
         "price": "",
@@ -8,7 +8,7 @@ const pizzas = [
 
     },
     {
-        "id": "",
+        "id": "2",
         "name": "",
         "description": "",
         "price": "",
@@ -16,7 +16,7 @@ const pizzas = [
 
     },
     {
-        "id": "",
+        "id": "3",
         "name": "",
         "description": "",
         "price": "",
@@ -24,7 +24,7 @@ const pizzas = [
 
     },
     {
-        "id": "",
+        "id": "4",
         "name": "",
         "description": "",
         "price": "",
@@ -32,7 +32,7 @@ const pizzas = [
 
     },
     {
-        "id": "",
+        "id": "5",
         "name": "",
         "description": "",
         "price": "",
@@ -40,7 +40,7 @@ const pizzas = [
 
     },
     {
-        "id": "",
+        "id": "6",
         "name": "",
         "description": "",
         "price": "",
@@ -48,7 +48,7 @@ const pizzas = [
 
     },
     {
-        "id": "",
+        "id": "7",
         "name": "",
         "description": "",
         "price": "",
@@ -56,7 +56,7 @@ const pizzas = [
 
     },
     {
-        "id": "",
+        "id": "8",
         "name": "",
         "description": "",
         "price": "",
