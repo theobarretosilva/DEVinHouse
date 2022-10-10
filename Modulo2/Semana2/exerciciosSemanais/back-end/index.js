@@ -13,12 +13,6 @@ app.listen(3333, () => {
     console.log("Servidor online!");
 });
 
-app.get('/pizzas', (request, response) => {
-    const nameQuery = request.query.name;
-    const pizzasFiltered = pizzas.filter(pizza => pizza.name.toLowerCase().includes(nameQuery));
-    response.json(pizzasFiltered)
-})
-
 app.post('/pizzas', (request, response) => {
     const {name, description, price, ingredients} = request.body;
     const pizza = {
@@ -36,6 +30,12 @@ app.post('/pizzas', (request, response) => {
 
 app.get('/solicitations', (request, response) => {
     response.json(solicitations)
+})
+
+app.get('/pizzas', (request, response) => {
+    const nameQuery = request.query.name;
+    const pizzasFiltered = pizzas.filter(pizza => pizza.name.toLowerCase().includes(nameQuery));
+    response.json(pizzasFiltered)
 })
 
 app.post('/solicitations', (request, response) => {
