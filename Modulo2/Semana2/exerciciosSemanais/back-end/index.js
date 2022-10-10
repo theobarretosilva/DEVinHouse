@@ -1,10 +1,11 @@
 const { v4: uuidv4 } = require('uuid');
 const express = require('express');
-const { response } = require('express');
+const { response, request } = require('express');
 const app = express();
 
 let pizzas = [];
 let solicitations = [];
+let userAddress = [];
 
 app.use(express.json());
 
@@ -64,4 +65,25 @@ app.get('/solicitations/:id', (request, response) => {
     }
 
     response.json(orderPerId)
+})
+
+app.post('/user/address', (request, response) => {
+    const {zipCode, neighborhood, street, number, complement, addressName} = request.body;
+    const address = {
+        id: uuidv4(),
+        zipCode,
+        neighborhood,
+        street,
+        number,
+        complement,
+        addressName,
+    };
+
+    userAddress.push(address);
+
+    response.status(201).json(address);
+});
+
+app.get('/user/address', (request, response) => {
+    response.json(userAddress)
 })
