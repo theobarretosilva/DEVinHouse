@@ -55,3 +55,13 @@ app.post('/solicitations', (request, response) => {
 
     response.status(201).json(solicitation)
 })
+
+app.get('/solicitations/:id', (request, response) => {
+    const orderPerId = solicitations.find(solicitation => solicitation.id === request.params.id);
+
+    if(!orderPerId){
+        return response.status(404).json({ error: 'Desculpe, esse item não foi encontrado!' })
+    }
+
+    response.json(orderPerId)
+})
