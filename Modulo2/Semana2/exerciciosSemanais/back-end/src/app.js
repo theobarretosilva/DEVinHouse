@@ -4,8 +4,8 @@ import solicitationsRouter from './routes/solicitations.routes.js';
 import userRouter from './routes/user.routes.js';
 
 const app = express();
-
 app.use(express.json());
+
 app.use(pizzasRouter);
 app.use(solicitationsRouter);
 app.use(userRouter);

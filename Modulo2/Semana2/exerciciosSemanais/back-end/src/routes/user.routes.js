@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { create } from '../controllers/user.controller.js';
+import { createOne } from '../controllers/user.controller.js';
 
 const userRouter = Router();
 
-userRouter.post('/user/address', create)
+userRouter.post('/user/address', createOne)
 
 export default userRouter;

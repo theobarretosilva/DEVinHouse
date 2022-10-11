@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 let userAddress = [];
 
-export function create(request, response){
+export function createOne(request, response){
     const {zipCode, neighborhood, street, number, complement, addressName} = request.body;
     const address = {
         id: uuidv4(),
