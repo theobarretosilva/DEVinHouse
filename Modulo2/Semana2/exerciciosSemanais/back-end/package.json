@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "api": "nodemon src/index.js"
+    "servidor": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
