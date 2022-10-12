@@ -45,7 +45,7 @@ app.get('/pizzas', (request, response) => {
     const nameQuery = request.query.name || "";
     const pizzasFiltered = pizzas.filter(pizza => pizza.name.toLowerCase().includes(nameQuery.toLowerCase()));
     response.json(pizzasFiltered);
-  })
+})
 
 app.post('/solicitations', (request, response) => {
     const {clientName, clientCpf, clientAddress, clientPhone, payment, obs, pizzaOrder} = request.body;
