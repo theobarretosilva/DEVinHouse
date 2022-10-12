@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express()
 const { v4: uuidv4 } = require('uuid');
+const cors = require('cors')
 
 let pizzas = [];
 let solicitations = [];
 let userAddress = [];
 
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
 
 app.listen(3333, () => {
     console.log('Servidor online!');
