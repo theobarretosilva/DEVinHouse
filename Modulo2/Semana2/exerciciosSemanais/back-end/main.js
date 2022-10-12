@@ -33,7 +33,7 @@ app.get('/pizzas', (request, response) => {
 });
 
 app.get('/pizzas', (request, response) => {
-    const nameQuery = request.query.name || "";
+    const nameQuery = request.query.name;
     const pizzasFiltered = pizzas.filter(pizza => pizza.name.toLowerCase().includes(nameQuery.toLowerCase()));
     response.json(pizzasFiltered);
 });
