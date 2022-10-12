@@ -13,10 +13,11 @@ app.listen(3333, () => {
 })
 
 app.post('/pizzas', (request, response) => {
-    const {name, description, price, ingredients} = request.body;
+    const {name, url, description, price, ingredients} = request.body;
     const pizza = {
         id: uuidv4(),
         name,
+        url,
         description,
         price,
         ingredients
@@ -32,8 +33,8 @@ app.get('/pizzas', (request, response) => {
 });
 
 app.get('/pizzas', (request, response) => {
-    const nameQuery = request.query.name;
-    const pizzasFiltered = pizzas.filter(pizza => pizza.name.toLowerCase().includes(nameQuery));
+    const nameQuery = request.query.name || "";
+    const pizzasFiltered = pizzas.filter(pizza => pizza.name.toLowerCase().includes(nameQuery.toLowerCase()));
     response.json(pizzasFiltered);
 });
 
@@ -85,4 +86,8 @@ app.post('/user/address', (request, response) => {
     userAddress.push(address);
 
     response.status(201).json(address);
+});
+
+app.get('/user/address', (request, response) => {
+    response.json(userAddress);
 });
