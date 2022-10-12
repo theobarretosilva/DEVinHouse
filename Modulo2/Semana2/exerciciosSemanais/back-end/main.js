@@ -13,15 +13,22 @@ app.listen(3333, () => {
 })
 
 app.post('/pizzas', (request, response) => {
-    const {name, url, description, price, ingredients} = request.body;
-    const pizza = {
+    const { name, description, price, url, ingredients } = request.body
+
+    const pizzaExists = pizzas.find(pizza => pizza.name === name)
+
+    if(pizzaExists) {
+        return response.status(401).json({error: 'Pizza já encontra-se cadastrada'})
+    }
+
+    const pizza = { 
         id: uuidv4(),
-        name,
+        name, 
         url,
-        description,
+        description, 
         price,
         ingredients
-    };
+    }
 
     pizzas.push(pizza);
 
@@ -33,13 +40,14 @@ app.get('/pizzas', (request, response) => {
 });
 
 app.get('/pizzas', (request, response) => {
-    const nameQuery = request.query.name;
+    const nameQuery = request.query.name || "";
     const pizzasFiltered = pizzas.filter(pizza => pizza.name.toLowerCase().includes(nameQuery.toLowerCase()));
     response.json(pizzasFiltered);
-});
+  })
 
 app.post('/solicitations', (request, response) => {
     const {clientName, clientCpf, clientAddress, clientPhone, payment, obs, pizzaOrder} = request.body;
+    
     const solicitation = {
         id: uuidv4(),
         clientName,
