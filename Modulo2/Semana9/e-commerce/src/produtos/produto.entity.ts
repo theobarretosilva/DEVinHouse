@@ -1,25 +1,23 @@
-import { IsNotEmpty } from 'class-validator';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { categoriasProdutos } from './utils/categoriasProdutos';
 
-export class Produto {
-  @IsNotEmpty({
-    message: 'O nome é obrigatório!',
-  })
+@Entity({ name: 'produtos' })
+export class ProdutoEntity {
+  @PrimaryGeneratedColumn()
+  id: string;
+
+  @Column({ length: 100 })
   name: string;
 
-  @IsNotEmpty({
-    message: 'O preço do produto é obrigatório!',
-  })
+  @Column('float')
   price: number;
 
-  @IsNotEmpty({
-    message: 'A descrição do produto é obrigatória!',
-  })
+  @Column()
   description: string;
 
-  available = true;
+  @Column('int')
+  stock: number;
 
-  @IsNotEmpty({
-    message: 'A categoria do produto é obrigatória!',
-  })
-  category: string;
+  @Column('int')
+  category: categoriasProdutos;
 }

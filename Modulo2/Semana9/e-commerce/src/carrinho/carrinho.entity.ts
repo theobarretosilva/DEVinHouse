@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Produto } from 'src/produtos/produto.entity';
+import { ProdutoEntity } from 'src/produtos/produto.entity';
 
 export class Carrinho {
   user: 'usuario2508';
@@ -12,5 +12,5 @@ export class Carrinho {
   @IsNotEmpty({
     message: 'Os produtos são obrigatórios',
   })
-  products: Produto[];
+  products: ProdutoEntity[];
 }
