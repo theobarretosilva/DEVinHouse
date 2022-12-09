@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common/decorators';
+import { Body, Controller, Get, Post } from '@nestjs/common/decorators';
 import { ProdutoEntity } from './produto.entity';
 import { ProdutosService } from './produtos.service';
 
@@ -7,7 +7,12 @@ export class ProdutosController {
   constructor(private produtoService: ProdutosService) {}
 
   @Post()
-  criar(@Body() produto: ProdutoEntity) {
-    return this.produtoService.criar(produto);
+  insert(@Body() produto: ProdutoEntity) {
+    return this.produtoService.insert(produto);
+  }
+
+  @Get()
+  findAll() {
+    return this.produtoService.findAll();
   }
 }

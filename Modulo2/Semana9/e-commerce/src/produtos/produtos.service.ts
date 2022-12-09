@@ -6,10 +6,14 @@ import { ProdutoEntity } from './produto.entity';
 export class ProdutosService {
   constructor(
     @Inject('PRODUTOS_REPOSITORY')
-    private userRepository: Repository<ProdutoEntity>,
+    private produtoRepository: Repository<ProdutoEntity>,
   ) {}
 
-  async criar(produto: ProdutoEntity) {
-    return await this.userRepository.insert(produto);
+  async insert(produto: ProdutoEntity) {
+    return await this.produtoRepository.insert(produto);
+  }
+
+  async findAll(): Promise<ProdutoEntity[]> {
+    return await this.produtoRepository.find();
   }
 }
