@@ -16,8 +16,8 @@ export class ProdutoEntity {
   description: string;
 
   @Column('int')
-  stock: number;
+  stock?: number;
 
-  @Column('int')
-  category: categoriasProdutos;
+  @Column()
+  category: string;
 }

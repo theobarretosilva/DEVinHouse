@@ -1,5 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common/decorators';
 import { Repository } from 'typeorm';
+import { ProdutoDTO } from './dto/produto.dto';
+import { FindProdutoDTO } from './dto/findProduto.dto';
 import { ProdutoEntity } from './produto.entity';
 
 @Injectable()
@@ -9,11 +11,23 @@ export class ProdutosService {
     private produtoRepository: Repository<ProdutoEntity>,
   ) {}
 
-  async insert(produto: ProdutoEntity) {
-    return await this.produtoRepository.insert(produto);
+  async insert(produto: ProdutoDTO): Promise<ProdutoEntity> {
+    return new Promise(async (resolve) => {
+      const response = await this.produtoRepository.insert({
+        ...produto,
+      });
+      const { id } = response.generatedMaps[0];
+      let created = new ProdutoEntity();
+      created = { ...produto, id: id };
+      resolve(created);
+    });
   }
 
   async findAll(): Promise<ProdutoEntity[]> {
     return await this.produtoRepository.find();
+  }
+
+  async findOne(param: FindProdutoDTO): Promise<ProdutoEntity> {
+    return await this.produtoRepository.findOneBy(param);
   }
 }
