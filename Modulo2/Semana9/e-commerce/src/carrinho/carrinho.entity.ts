@@ -1,16 +1,24 @@
-import { IsNotEmpty } from 'class-validator';
 import { ProdutoEntity } from 'src/produtos/produto.entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
-export class Carrinho {
+@Entity({ name: 'carrinho' })
+export class CarrinhoEntity {
+  @PrimaryGeneratedColumn()
+  id: string;
+
+  @Column()
   user: 'usuario2508';
 
-  @IsNotEmpty({
-    message: 'O preço é obrigatório!',
-  })
+  @Column()
   price: number;
 
-  @IsNotEmpty({
-    message: 'Os produtos são obrigatórios',
-  })
-  products: ProdutoEntity[];
+  @OneToMany(() => ProdutoEntity, (produto) => produto.id)
+  @JoinColumn()
+  products: ProdutoEntity;
 }
