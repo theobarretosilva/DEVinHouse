@@ -2,9 +2,6 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'produtos' })
 export class ProdutoEntity {
-  @PrimaryGeneratedColumn()
-  id: string;
-
   @Column({ length: 100 })
   name: string;
 
