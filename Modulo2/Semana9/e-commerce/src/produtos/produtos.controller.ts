@@ -28,10 +28,14 @@ export class ProdutosController {
   }
 
   @Get(':id')
-  async findOne(@Param() params: FindProdutoDTO): Promise<ProdutoEntity> {
+  async findOne(@Param('id') params) {
     const produtoExiste = await this.produtoService.findOne(params);
     if (produtoExiste) {
       return produtoExiste;
+    } else {
+      return {
+        message: 'Produto não encontrado!',
+      };
     }
   }
 }

@@ -27,7 +27,11 @@ export class ProdutosService {
     return await this.produtoRepository.find();
   }
 
-  async findOne(param: FindProdutoDTO): Promise<ProdutoEntity> {
-    return await this.produtoRepository.findOneBy(param);
+  async findOne(param): Promise<ProdutoEntity> {
+    return await this.produtoRepository.findOne({
+      where: {
+        id: param,
+      },
+    });
   }
 }

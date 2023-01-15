@@ -1,5 +1,4 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { categoriasProdutos } from './utils/categoriasProdutos';
 
 @Entity({ name: 'produtos' })
 export class ProdutoEntity {
