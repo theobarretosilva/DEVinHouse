@@ -1,14 +1,4 @@
-import { HttpStatus } from '@nestjs/common';
-import {
-  Body,
-  Controller,
-  Get,
-  Param,
-  Post,
-  Res,
-} from '@nestjs/common/decorators';
-import { response } from 'express';
-import { FindProdutoDTO } from './dto/findProduto.dto';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common/decorators';
 import { ProdutoDTO } from './produto.dto';
 import { ProdutoEntity } from './produto.entity';
 import { ProdutosService } from './produtos.service';
