@@ -1,0 +1,892 @@
+{
+	"info": {
+		"_postman_id": "0348c959-5ff5-4c4d-86e4-f2a68fcad0b0",
+		"name": "Intelbras",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18628383"
+	},
+	"item": [
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/produtos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produtos (Filters)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/produtos/findByFilter?name=Interfone 2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"produtos",
+								"findByFilter"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Interfone 2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produtos por nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/produtos/query/fone",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"produtos",
+								"query",
+								"fone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/produtos/7",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"produtos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/produtos/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"produtos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Roteador\",\r\n    \"code\": \"DDD\",\r\n    \"category\": \"redes\",\r\n    \"price\": 249.90,\r\n    \"stock\": 24\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/produtos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Produto Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Roteador\",\r\n    \"code\": \"DDD\",\r\n    \"category\": \"redes\",\r\n    \"price\": 249.90,\r\n    \"stock\": 24\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/produtos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Endereços",
+					"item": [
+						{
+							"name": "Endereço Usuário",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/usuarios/enderecos/8",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"usuarios",
+										"enderecos",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remover Usuário",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/usuarios/1",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"usuarios",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Criar Endereço",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rua\": \"José Lourenço\",\r\n    \"bairro\": \"São Pedro\",\r\n    \"cep\": \"36036-230\",\r\n    \"cidade\": \"Juiz de Fora\",\r\n    \"complemento\": \"BL 25 AP 403\",\r\n    \"estado\": \"MG\",\r\n    \"pais\": \"BR\",\r\n    \"active\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/usuarios/address/8",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"usuarios",
+										"address",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Usuário",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Yan M Esteves\",\r\n    \"email\": \"yan.esteves@gmail.com\",\r\n    \"active\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/usuarios/2",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"usuarios",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/usuarios",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/usuarios/14",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Erro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/usuarios/erro",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios",
+								"erro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/usuarios/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Usuário [DESCONTINUADO]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Davi Esteves\",\r\n    \"email\": \"davi.esteves@gmail.com\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/usuarios",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Yan M Esteves\",\r\n    \"email\": \"yan.esteves@gmail.com\",\r\n    \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/usuarios/2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GovDigital",
+			"item": [
+				{
+					"name": "Vacinas",
+					"item": [
+						{
+							"name": "Vacinas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/vaccines",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"vaccines"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Criar Vacina",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"COVID-19\",\r\n    \"laboratory\": \"Sinovac\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/vaccines",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"vaccines"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remover Vacina do Cartão",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/vaccines/3",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"vaccines",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Adc Vacina em um cartão",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vaccines\": [\r\n        { \"id\": 3 }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/vaccines/link-vaccine/1",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"vaccines",
+										"link-vaccine",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Pessoas",
+					"item": [
+						{
+							"name": "Persons",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Yan Esteves\",\r\n    \"driver\": {\r\n        \"registry\": \"123456\",\r\n        \"category\": \"B\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/govdigital/persons",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"govdigital",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Persons [2]",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Yan Esteves\",\r\n    \"driver\": {\r\n        \"registry\": \"123456\",\r\n        \"category\": \"B\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/govdigital?motorista=true",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"govdigital"
+									],
+									"query": [
+										{
+											"key": "motorista",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Driver",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Yan Esteves\",\r\n    \"driver\": {\r\n        \"registry\": \"123456\",\r\n        \"category\": \"B\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/govdigital/drivers",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"govdigital",
+										"drivers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Person [Full Info]",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Yan Esteves\",\r\n    \"driver\": {\r\n        \"registry\": \"123456\",\r\n        \"category\": \"B\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/govdigital/person/1",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"govdigital",
+										"person",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Address",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"street\": \"Rua José\",\r\n    \"number\": 300,\r\n    \"district\": \"São Pedro\",\r\n    \"city\": \"Juiz de Fora\",\r\n    \"state\": \"MG\",\r\n    \"country\": \"BR\",\r\n    \"zip\": \"36036-000\"    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/govdigital/link-address/3",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"govdigital",
+										"link-address",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Person",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Yan Esteves\",\r\n    \"cpf\": \"10010010010\",\r\n    \"driver\": {\r\n        \"registry\": \"553456\",\r\n        \"category\": \"AB\"\r\n    },\r\n    \"vaccine_card\": {\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/govdigital",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"govdigital"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Driver License",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"block\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/govdigital/driver-license/1",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"govdigital",
+										"driver-license",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Person",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"block\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/govdigital/person/3",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"govdigital",
+										"person",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Address",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"block\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/govdigital/address/2",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"govdigital",
+										"address",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"yan.m.esteves@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/auth/signin",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Headers [TEST]",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IllhbiBFc3RldmVzIiwiZW1haWwiOiJ5YW4ubS5lc3RldmVzQGdtYWlsLmNvbSIsImlhdCI6MTY3MDM1MTg0NSwiZXhwIjoxNjcwMzUyMjA1fQ.OWnCY-GCDCsJvHmB7nlg1V7gViFwPGskoifSD_4X2xk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/auth/me",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Yan Esteves\",\r\n    \"email\": \"yan.m.esteves@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"confirm_password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/auth/signup",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Twitter",
+			"item": [
+				{
+					"name": "Create Tweet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nome\": \"Zezinho\",\r\n\t\"email\": \"zezeinhp@mail.com\",\r\n\t\"usuario\": \"zeze\",\r\n\t\"ativo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/twitter",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"twitter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
