@@ -34,4 +34,12 @@ export class ProdutosService {
       },
     });
   }
+
+  async findByCategory(category) {
+    return await this.produtoRepository.findOne({
+      where: {
+        category: category,
+      },
+    });
+  }
 }

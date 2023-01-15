@@ -38,4 +38,16 @@ export class ProdutosController {
       };
     }
   }
+
+  @Get('/findByCategory/:category')
+  async findByCategory(@Param('category') category) {
+    const foundProduct = await this.produtoService.findByCategory(category);
+    if (foundProduct) {
+      return foundProduct;
+    } else {
+      return {
+        message: 'Produto não encontrado!',
+      };
+    }
+  }
 }
