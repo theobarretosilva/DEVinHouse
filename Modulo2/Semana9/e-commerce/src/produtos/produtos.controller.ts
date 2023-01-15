@@ -9,7 +9,7 @@ import {
 } from '@nestjs/common/decorators';
 import { response } from 'express';
 import { FindProdutoDTO } from './dto/findProduto.dto';
-import { ProdutoDTO } from './dto/produto.dto';
+import { ProdutoDTO } from './produto.dto';
 import { ProdutoEntity } from './produto.entity';
 import { ProdutosService } from './produtos.service';
 

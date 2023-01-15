@@ -1,7 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common/decorators';
 import { Repository } from 'typeorm';
-import { ProdutoDTO } from './dto/produto.dto';
-import { FindProdutoDTO } from './dto/findProduto.dto';
+import { ProdutoDTO } from './produto.dto';
 import { ProdutoEntity } from './produto.entity';
 
 @Injectable()
