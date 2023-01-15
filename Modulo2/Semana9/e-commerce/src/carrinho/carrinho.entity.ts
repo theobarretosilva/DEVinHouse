@@ -18,7 +18,7 @@ export class CarrinhoEntity {
   @Column()
   price: number;
 
-  @OneToMany(() => ProdutoEntity, (produto) => produto.id)
+  @OneToMany(() => ProdutoEntity, (produto) => produto.name)
   @JoinColumn()
   products: ProdutoEntity;
 }

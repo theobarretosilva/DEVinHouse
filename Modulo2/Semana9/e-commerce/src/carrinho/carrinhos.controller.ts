@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { CarrinhoDTO } from './carrinho.dto';
 import { CarrinhosService } from './carrinhos.service';
 
@@ -14,5 +14,10 @@ export class CarrinhosController {
   @Post()
   async addProduct(@Body() carrinhoDTO: CarrinhoDTO) {
     return await this.carrinhoService.addProduct(carrinhoDTO);
+  }
+
+  @Put(':productName')
+  async deleteProduct(@Param('productName') productName: string) {
+    return await this.carrinhoService.deleteProduct(productName);
   }
 }

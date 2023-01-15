@@ -1,4 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
+import { privateDecrypt } from 'crypto';
 import { Repository } from 'typeorm';
 import { CarrinhoDTO } from './carrinho.dto';
 import { CarrinhoEntity } from './carrinho.entity';
@@ -22,5 +23,14 @@ export class CarrinhosService {
       const carrinhoCreated = this.carrinhoRepository.save(carrinho);
       resolve(carrinhoCreated);
     });
+  }
+
+  async deleteProduct(productName: string) {
+    return await this.carrinhoRepository
+      .createQueryBuilder('carrinho')
+      .delete()
+      .from(CarrinhoEntity)
+      .where('products = :productName', { productName: productName })
+      .execute();
   }
 }
