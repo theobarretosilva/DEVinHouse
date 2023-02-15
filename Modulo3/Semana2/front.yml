@@ -1,0 +1,12 @@
+project: front_end
+version: 1.0.0
+active: true
+
+container_name: ex9-1
+
+description: Projeto de teste para exercicio sobre container com .yml
+
+roles:
+  - user.read
+  - user.write
+  - user.admin

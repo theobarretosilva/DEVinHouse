@@ -1,0 +1,12 @@
+project: database
+version: 1.5.0
+active: true
+
+container_name: ex9-2
+
+description: Projeto database de teste para exercicio sobre container com .yml
+
+roles:
+  - user.read
+  - user.write
+  - user.admin
