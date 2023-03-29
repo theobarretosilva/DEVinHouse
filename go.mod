@@ -1,3 +1,3 @@
-module github.com/theobarretosilva/devinhous
+module github.com/theobarretosilva/devinhouse
 
 go 1.20
