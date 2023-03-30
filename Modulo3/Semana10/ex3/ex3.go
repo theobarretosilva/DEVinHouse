@@ -16,7 +16,7 @@ type Moto struct {
 }
 
 type Revisao interface {
-	fazerRevisao(Carro, Moto)
+	fazerRevisao(carro Carro, moto Moto)
 }
 
 func agendarRevisao(r Revisao) {
