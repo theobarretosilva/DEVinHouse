@@ -1,9 +1,9 @@
 package main
 
 type Carteira interface {
-	enviar(valor float32, endereco Endereco)
-	receber(valor float32, endereco Endereco)
-	consultarSaldo(endereco Endereco)
+	Enviar(valor float32, endereco Endereco)
+	Receber(valor float32, endereco Endereco)
+	ConsultarSaldo(endereco Endereco)
 }
 
 type Endereco struct {
@@ -12,7 +12,7 @@ type Endereco struct {
 }
 
 func enviarBitcoin(carteira Carteira, valor float32, endereco Endereco) {
-	carteira.enviar(valor, endereco)
+	carteira.Enviar(valor, endereco)
 }
 
 func main() {
