@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Address struct {
 	Street  string
 	City    string
@@ -14,9 +16,18 @@ type Person struct {
 }
 
 func main() {
-	pessoa := []Person{
-		{Name: "Théo", Age: 17, Address: },
-		{},
-		{},
+	endereco := Address{
+		Street:  "Rua tal",
+		City:    "São Pedro",
+		State:   "SC",
+		zipCode: "88105-895",
 	}
+
+	pessoa := []Person{
+		{Name: "Théo", Age: 17, Address: endereco},
+		{Name: "Julia", Age: 80, Address: endereco},
+		{Name: "Pablo", Age: 19, Address: endereco},
+	}
+
+	fmt.Println(pessoa)
 }
