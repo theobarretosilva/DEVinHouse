@@ -5,15 +5,15 @@ import (
 )
 
 type Minerador interface {
-	Minerar(minerador MineradorDeBitcoin) float64;
+	Minerar(minerador MineradorDeBitcoin) int;
 }
 
 type MineradorDeBitcoin struct {
 	
 }
 
-func (mineradorDeBitcoin MineradorDeBitcoin) Minerar(minerador Minerador) {
-	
+func (mineradorDeBitcoin MineradorDeBitcoin) Minerar(minerador Minerador) int {
+	return rand.Intn(7);
 }
 
 type Carteira interface {
@@ -36,4 +36,9 @@ func main() {
 	endereco := Endereco{chavePublica: "a6eDG2q4d*2%", chavePrivada: "n0*cuWFO386X"}
 
 	enviarBitcoin(carteira, 150.85, endereco);
+
+	var minerador Minerador;
+	var mineradorDeBitcoin MineradorDeBitcoin;
+
+	minerador.Minerar(mineradorDeBitcoin);
 }
